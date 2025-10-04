@@ -15,7 +15,7 @@
             <span>©</span>
             <span>Code by Matthieu</span>
         </div>
-        <div class="container_bouton_nav">
+        <div class="container_bouton_header">
             <button class="menu" type="button">
                 <span class="button_text">Menu</span>
                 <div class="button_filler"></div>
@@ -58,6 +58,17 @@
             </div>
         </div>
     </div>
+    <main>
+        <section id="home">
+            <div class="container_home">
+                <div class="container_home_image">
+                    <img src="assets/img/matthieuAfane1.png" alt="photo_Matthieu_Afane">
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
     <h1>Bonjour</h1>
     
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati blanditiis eos quis, veniam nostrum deleniti eligendi vitae maxime harum minus optio dolor a earum. Ratione iusto voluptas illo saepe.</p>
