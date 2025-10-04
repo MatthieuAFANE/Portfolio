@@ -1,0 +1,11 @@
+@import url('clash-display.css');
+@import url('general-sans.css');
+
+h1 {
+    font-family: 'ClashDisplay-Variable';
+    font-weight: 200;
+}
+p {
+    font-family: 'GeneralSans-Variable';
+    font-weight: 400;
+}
