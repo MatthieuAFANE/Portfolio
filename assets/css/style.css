@@ -1,11 +1,198 @@
 @import url('clash-display.css');
 @import url('general-sans.css');
+/* --- Reset CSS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
+  font-family: 'GeneralSans-Variable', sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+/* BUTTON ROND */
+button {
+    cursor: pointer;
+}
+button {
+    border-radius: 1000px;
+    font-size: 14px;
+    overflow: hidden;
+    position: relative;
+}
+.button_text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.button_filler {
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  background: var(--fillerColor);
+  transform: translate3d(0, 75%, 0);
+  z-index: 1;
+}
+
+/* Spécifique à ton bouton "close" */
+.close, .menu {
+  --baseColor: #222;
+  --fillerColor: #ff0000;
+  --hoverTextColor: #ffffff;
+}
+
+/* Animations */
+.hover-in .button_text {
+  animation: textHoverIn 0.5s forwards;
+}
+.hover-in .button_filler {
+  animation: fillerHoverIn 0.8s forwards;
+}
+
+.hover-out .button_text {
+  animation: textHoverOut 0.5s forwards;
+}
+.hover-out .button_filler {
+  animation: fillerHoverOut 0.8s forwards;
+}
+
+/* Keyframes */
+@keyframes textHoverIn {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    color: var(--hoverTextColor);
+  }
+}
+
+@keyframes textHoverOut {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillerHoverIn {
+  0% {
+    transform: translate3d(0, 75%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fillerHoverOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -75%, 0);
+  }
+}
+/* FIN BUTTON ROND */
+/* CSS PORTFOLIO */
 h1 {
     font-family: 'ClashDisplay-Variable';
     font-weight: 200;
 }
-p {
-    font-family: 'GeneralSans-Variable';
-    font-weight: 400;
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
 }
+.container_bouton_nav button {
+    height: 70px;
+    width: 70px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 1000px;
+    font-size: 14px;
+    overflow: hidden;
+    position: relative;
+}
+/* FIN HEADER */
+/* NAV */
+.container_nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 5%;
+    z-index: 10000;
+}
+.container_nav.active {
+    top: 0;
+}
+.container_nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+.container_nav nav ul li a {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: 70px;
+    font-weight: 500;
+}
+.container_social {
+    margin-top: 40px;
+    width: 100%;
+}
+.container_social_title {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #D7D7D8;
+    border-bottom: 1px solid #D7D7D8;
+}
+.container_nav nav {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.container_nav.active nav {
+    opacity: 1;
+}
+.container_social .container_social_info,
+.container_social .container_social_info ul {
+    display: flex;
+    justify-content: space-between;
+}
+.container_social_info ul li:not(:last-child) {
+    margin-right: 10px;
+}
+/* FIN NAV */
