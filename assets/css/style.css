@@ -124,10 +124,7 @@ button {
 }
 /* FIN BUTTON ROND */
 /* CSS PORTFOLIO */
-h1 {
-    font-family: 'ClashDisplay-Variable';
-    font-weight: 200;
-}
+
 /* HEADER */
 header {
     position: absolute;
@@ -144,6 +141,7 @@ header {
     position: fixed;
     top: 25px;
     right: 5%;
+    z-index: 100;
 }
 .container_bouton_header button {
     height: 70px;
@@ -234,4 +232,187 @@ section#home {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+/* FIN HOME */
+/* WORK */
+section#work {
+  width: 100%;
+  padding: 50px 5%;
+}
+.container_work_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_work_header_title h2 {
+  font-family: 'ClashDisplay-Variable', sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+}
+.contaier_work_header_display {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+.contaier_work_header_display button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #dfdfdf;
+}
+
+.container_work_content {
+  margin-top: 30px;
+  display: grid;
+  /* ajoute apres en fonction des bouton disposition les template pour display grid */
+  width: 100%;
+}
+.work_template:not(:last-child) {
+  margin-bottom: 45px;
+}
+.work_template_image {
+  display: flex;
+}
+.work_template_image img {
+  width: 100%;
+}
+.work_template_info {
+  margin-top: 20px;
+}
+.work_template_info_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+  height: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.work_template_info_header_title h3 {
+  font-family: 'ClashDisplay-Variable', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+.work_template_info_header_more a {
+  padding: 5px 15px;
+  border: 1px solid #dfdfdf;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.typeANDdate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5px;
+}
+.typeANDdate h4 {
+  font-weight: 500;
+  font-size: 12px;
+}
+.technology p {
+  font-weight: 500;
+  color: #8D8E8F;
+  font-size: 12px;
+}
+/* FIN WORK */
+/* FOOTER */
+.container_footer {
+  background-color: #1C1D20;
+  padding: 50px 5%;
+}
+.container_footer_header {
+  display: flex;
+  align-items: center;
+}
+.container_footer_header .image {
+  height: 30px;
+  width: 30px;
+}
+.container_footer_header .image img {
+  width: 100%;
+  height: 100%;
+}
+.container_footer_header .text {
+  margin-left: 10px;
+}
+.container_footer_header .text h2 {
+  font-family: 'ClashDisplay-Variable', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #fff;
+}
+.container_button {
+  display: flex;
+  margin: 40px 0 30px;
+}
+.container_button button {
+  border: 1px solid #48494C;
+  width: 220px;
+  height: 50px;
+  color: #fff;
+}
+.container_button button:first-child {
+  margin-right: 10px;
+}
+.container_button button .button_filler {
+  background-color: #455CE9;
+}
+.container_footer_edition_socials {
+  padding-top: 10px;
+  border-top: 1px solid #48494C;
+  display: flex;
+  justify-content: space-between;
+}
+.container_footer_edition_socials .edition .title h4 {
+  color: #8B8C8D;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container_footer_edition_socials .edition .info span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container_footer_edition_socials .socials .title h4 {
+  color: #8B8C8D;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container_footer_edition_socials .socials ul {
+  display: flex;
+}
+.container_footer_edition_socials .socials ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container_footer_edition_socials .socials ul li:not(:last-child) {
+  margin-right: 10px;
+}
+/* FIN FOOTER */
+/*test*/
+
+    h1 {
+      font-size: 3rem;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    h1 span {
+      margin: 0 1rem;
+    }
+
+.wrapper {
+  overflow: hidden;
+  width: 100vw;
+  background-color: #000;
+}
+
+.marquee {
+  display: inline-block; /* essentiel */
+  white-space: nowrap;   /* empêche le retour à la ligne */
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  will-change: transform;
 }
