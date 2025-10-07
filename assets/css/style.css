@@ -262,28 +262,83 @@ section#work {
 
 .container_work_content {
   margin-top: 30px;
-  display: grid;
   /* ajoute apres en fonction des bouton disposition les template pour display grid */
   width: 100%;
 }
 .work_template:not(:last-child) {
   margin-bottom: 45px;
 }
-.work_template_image {
+.work_template_image_more {
   display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.work_template_image {
+  width: 100%;
 }
 .work_template_image img {
   width: 100%;
+  transition: .3s;
 }
+.work_template_image_more:hover img {
+    transform: scale(1.05);
+}
+.work_template_more {
+  position: absolute;
+  padding: 20px 30px;
+  width: 100%;
+  pointer-events: none; /* important ! laisse passer les clics */
+  cursor: pointer;
+}
+.work_template_more a.code {
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  padding: 7.5px 15px;
+  border-radius: 50px;
+}
+.work_template_more a.code span {
+  margin-left: 5px;
+  font-size: 10px;
+  font-weight: 500;
+}
+.work_template_more a.view{
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.work_template_image_more:hover .work_template_more a.view{
+  display: block;
+}
+.work_template_more a.view svg {
+  height: 49px;
+  width: 49px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* important ! laisse passer les clics */
+    cursor: pointer;
+}
+/* hover sur le conteneur : overlay + icônes apparaissent */
+.work_template_image_more:hover .overlay {
+    opacity: 1;
+}
+
+/* effet zoom image */
+
 .work_template_info {
   margin-top: 20px;
 }
 .work_template_info_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid #dfdfdf;
-  height: 50px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
@@ -291,12 +346,6 @@ section#work {
   font-family: 'ClashDisplay-Variable', sans-serif;
   font-size: 22px;
   font-weight: 500;
-}
-.work_template_info_header_more a {
-  padding: 5px 15px;
-  border: 1px solid #dfdfdf;
-  border-radius: 50px;
-  font-size: 12px;
 }
 .typeANDdate {
   display: flex;

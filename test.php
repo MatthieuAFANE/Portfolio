@@ -35,6 +35,37 @@
     .marquee span {
       margin: 0 1rem;
     }
+
+
+
+
+    .work_template_image {
+    position: relative;
+    display: inline-block;
+}
+
+.image_link img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Les deux liens cachés par défaut */
+.work_template_image_more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.work_template_image:hover .work_template_image_more {
+    opacity: 1;
+}
   </style>
 </head>
 
@@ -44,6 +75,36 @@
       Matthieu Afane <span>—</span> Matthieu Afane <span>—</span> Matthieu Afane <span>—</span> Matthieu Afane <span>—</span> Matthieu Afane <span>—</span>
     </h1>
   </div>
+
+
+  <figure class="work_template">
+    <div class="work_template_image">
+        <a href="#" class="image_link">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.tU1NAZ2vUoqqNIMhyPuV0QHaF2?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="TWICE">
+        </a>
+        <div class="work_template_image_more">
+            <a href="#">View</a>
+            <a href="#">Code source</a>
+        </div>
+    </div>
+    <div class="work_template_info">
+        <div class="work_template_info_header">
+            <div class="work_template_info_header_title">
+                <h3>TWICE</h3>
+            </div>
+        </div>
+        <div class="work_template_info_content">
+            <div class="typeANDdate">
+                <h4 class="type">Development</h4>
+                <h4 class="date">2024</h4>
+            </div>
+            <div class="technology">
+                <p>HTML CSS JS PHP</p>
+            </div>
+        </div>
+    </div>
+</figure>
+
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
