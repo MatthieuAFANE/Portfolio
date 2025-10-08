@@ -15,9 +15,19 @@
             <span>©</span>
             <span>Code by Matthieu</span>
         </div>
+        <div class="container_nav_home">
+                <nav>
+                    <ul>
+                        <li><a id="underline" href="#">Home</a></li>
+                        <li><a id="underline" href="#">Work</a></li>
+                        <li><a id="underline" href="#">About</a></li>
+                        <li><a id="underline" href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         <div class="container_bouton_header">
-            <button class="menu" type="button">
-                <span class="button_text">Menu</span>
+            <button id="elastic" class="menu" type="button">
+               <span class="button_text">Menu</span>
                 <div class="button_filler"></div>
             </button>
         </div>
@@ -29,7 +39,7 @@
                 <span>Code by Matthieu</span>
             </div>
             <div class="container_bouton_nav">
-                <button class="close" type="button">
+                <button id="elastic" class="close" type="button">
                     <span class="button_text">Close</span>
                     <div class="button_filler"></div>
                 </button>
@@ -64,22 +74,18 @@
                 <div class="container_home_image">
                     <img src="assets/img/matthieuAfane1.png" alt="photo_Matthieu_Afane">
                 </div>
-                <div class="wrapper">
-                    <h1 class="marquee">
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        
-                        <!-- duplication pour un scroll fluide -->
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                        <span>Matthieu Afane — </span>
-                    </h1>
+                <div class="container_home_element">
+                    <div class="wrapper">
+                        <div class="name_wrap">
+                            <h1>Matthieu Afane<span class="spacer">—</span></h1>
+                        </div>
+                        <div class="name_wrap">
+                            <h1>Matthieu Afane<span class="spacer">—</span></h1>
+                        </div>
+                    </div>
                 </div>
+                </div>
+                
                 
             </div>
         </section>
@@ -220,10 +226,10 @@
                         <h4>Socials</h4>
                     </div>
                     <ul>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagrame</a></li>
-                        <li><a href="#">LinKedin</a></li>
+                        <li><a id="underline" href="#">GitHub</a></li>
+                        <li><a id="underline" href="#">Twitter</a></li>
+                        <li><a id="underline" href="#">Instagrame</a></li>
+                        <li><a id="underline" href="#">LinKedin</a></li>
                     </ul>
                 </div>
             </div>

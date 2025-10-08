@@ -58,20 +58,14 @@ button {
 /* Spécifique à ton bouton "close" */
 .close, .menu {
   --baseColor: #222;
-  --fillerColor: #ff0000;
+  --fillerColor: #455CE9;
   --hoverTextColor: #ffffff;
 }
 
 /* Animations */
-.hover-in .button_text {
-  animation: textHoverIn 0.5s forwards;
-}
+
 .hover-in .button_filler {
   animation: fillerHoverIn 0.8s forwards;
-}
-
-.hover-out .button_text {
-  animation: textHoverOut 0.5s forwards;
 }
 .hover-out .button_filler {
   animation: fillerHoverOut 0.8s forwards;
@@ -123,6 +117,31 @@ button {
   }
 }
 /* FIN BUTTON ROND */
+/* Lien effect souligner */
+a#underline {
+  position: relative;
+}
+a#underline::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+a#underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+a#underline:not(:hover)::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+/* FIN Lien effect souligner */
 /* CSS PORTFOLIO */
 
 /* HEADER */
@@ -136,23 +155,45 @@ header {
     padding: 0 5%;
     height: 120px;
     width: 100%;
+    z-index: 1;
+}
+header .logo span {
+  font-weight: 500;
+  color: #fff;
+}
+.container_nav_home nav ul {
+  display: flex;
+}
+.container_nav_home nav ul li:not(:last-child) {
+  margin-right: 20px;
+}
+.container_nav_home nav ul li a {
+  font-weight: 500;
+  color: #fff;
 }
 .container_bouton_header {
-    position: fixed;
-    top: 25px;
-    right: 5%;
-    z-index: 100;
+  position: fixed;
+  top: 25px;
+  right: 4%;
+  z-index: 100;
+  transform: scale(0); /* invisible au départ */
+  opacity: 0;
+  transition: all 0.2s ease;
+  pointer-events: none; /* pas cliquable au départ */
 }
-.container_bouton_header button {
-    height: 70px;
-    width: 70px;
-    background-color: #000;
+.container_bouton_header button.menu {
+    height: 100px;
+    width: 100px;
+    background-color: #1c1d20;
     color: #fff;
     border-radius: 1000px;
-    font-size: 14px;
-    
     position: relative;
 }
+button.menu .button_text {
+  font-weight: 500;
+  font-size: 16px;
+}
+
 /* FIN HEADER */
 /* NAV */
 .container_nav {
@@ -174,15 +215,18 @@ header {
     align-items: center;
     padding: 25px 0;
 }
-.container_nav_header .container_bouton_nav button {
-    height: 70px;
-    width: 70px;
-    background-color: #000;
+.container_nav_header button.close {
+    height: 100px;
+    width: 100px;
+    background-color: #455CE9;
     color: #fff;
     border-radius: 1000px;
-    font-size: 14px;
     overflow: hidden;
     position: relative;
+}
+.container_nav_header button.close .button_text {
+  font-weight: 500;
+  font-size: 16px;
 }
 .container_nav nav ul li a {
     font-family: 'ClashDisplay-Variable', sans-serif;
@@ -212,27 +256,58 @@ header {
     justify-content: space-between;
 }
 .container_social_info ul li:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 /* FIN NAV */
 /* MAIN */
 main {
-    width: 100%;
+  width: 100%;
 }
 /* HOME */
 section#home {
-    width: 100%;
+  width: 100%;
+}
+.container_home {
+  position: relative;
 }
 .container_home_image {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #AFAAA0, #DAD6CB);
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #6F6B63, #B2ACA1);
+
 }
 .container_home_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
+.container_home_element {
+  position: absolute;
+  bottom: 1vw;
+  left: 0;
+  width: 100%;
+}
+.container_home_element .wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+}
+.container_home_element .name_wrap {
+  white-space: nowrap;
+}
+.container_home_element .name_wrap h1 {
+  font-family: 'ClashDisplay-Variable', sans-serif;
+  font-size: max(9em, 15vw);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  display: inline-block;
+}
+.container_home_element .spacer {
+  padding: 0 3vw;
+}
+
 /* FIN HOME */
 /* WORK */
 section#work {
@@ -433,35 +508,11 @@ section#work {
   font-size: 14px;
   font-weight: 400;
 }
+.container_footer_edition_socials .socials ul li a#underline::after {
+  height: 2px;
+}
 .container_footer_edition_socials .socials ul li:not(:last-child) {
   margin-right: 10px;
 }
 /* FIN FOOTER */
 /*test*/
-
-    h1 {
-      font-size: 3rem;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    h1 span {
-      margin: 0 1rem;
-    }
-
-.wrapper {
-  overflow: hidden;
-  width: 100vw;
-  background-color: #000;
-}
-
-.marquee {
-  display: inline-block; /* essentiel */
-  white-space: nowrap;   /* empêche le retour à la ligne */
-  font-size: 3rem;
-  font-weight: 600;
-  color: white;
-  will-change: transform;
-}

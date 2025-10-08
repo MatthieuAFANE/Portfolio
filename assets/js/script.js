@@ -26,6 +26,74 @@ document.addEventListener("DOMContentLoaded", () => {
       containerNav.classList.remove("active");
     });
   }
+  // affiche bouton menu lorsqu'il depasse section#home
+const homeSection = document.getElementById('home');
+const menu = document.querySelector('.container_bouton_header');
+
+window.addEventListener('scroll', () => {
+  const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
+  const scrollY = window.scrollY;
+
+  if (scrollY >= homeBottom) {
+    // Affiche le bouton avec effet scale
+     menu.style.transform = 'scale(1)';
+      menu.style.opacity = '1';
+      menu.style.pointerEvents = 'auto';
+  } else {
+    // Cache et désactive le bouton
+     menu.style.transform = 'scale(0)';
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+  }
+});
+// animation suivie cursor button rond
+const elasticButtons = document.querySelectorAll('#elastic');
+
+elasticButtons.forEach((btn) => {
+  let rect = btn.getBoundingClientRect();
+
+  // Met à jour le rectangle lors du redimensionnement de la fenêtre
+  window.addEventListener('resize', () => {
+    rect = btn.getBoundingClientRect();
+  });
+
+  btn.addEventListener('mousemove', (e) => {
+    const localX = e.clientX - rect.left;
+    const localY = e.clientY - rect.top;
+    
+    const tx = (localX - rect.width / 2) * 0.4;
+    const ty = (localY - rect.height / 2) * 0.4;
+
+    // Animation position + légère rotation selon le mouvement
+    gsap.to(btn, {
+      x: tx,
+      y: ty,
+      rotationX: -ty / 2,
+      rotationY: tx / 2,
+      duration: 0.45,
+      ease: "power3.out",
+      transformPerspective: 600,
+      transformOrigin: "center"
+    });
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    // Reviens au centre avec rotation
+    gsap.to(btn, {
+      x: 0,
+      y: 0,
+      rotationX: 0,
+      rotationY: 0,
+      duration: 1.5,
+      ease: "elastic.out(2, 0.4)"
+    });
+  });
+});
+
+
+
+
+
 
   // --- Test GSAP ---
   if (window.gsap) {
@@ -35,33 +103,68 @@ document.addEventListener("DOMContentLoaded", () => {
     return; // stoppe le script ici
   }
 
-  // --- Animation du texte infini ---
-  const marquee = document.querySelector(".marquee");
-  if (!marquee) {
-    console.warn("⚠️ Élément .marquee non trouvé !");
-    return;
+// text Home defilement infini et change au scroll
+
+const wrap1 = document.querySelectorAll('.name_wrap')[0];
+const wrap2 = document.querySelectorAll('.name_wrap')[1];
+
+let direction = -1; // -1 = vers la gauche (défilement vers le bas par défaut)
+let speed = 0.3; 
+let pos = 0;
+
+// Largeur du texte réelle
+let wrapWidth = wrap1.getBoundingClientRect().width;
+
+// Position initiale
+wrap1.style.left = "0px";
+wrap2.style.left = `${wrapWidth}px`;
+
+function animate() {
+  pos += speed * direction;
+
+  if (pos <= -100) pos = 0;
+  if (pos >= 0 && direction === 1) pos = -100;
+
+  wrap1.style.transform = `translateX(${pos}%)`;
+  wrap2.style.transform = `translateX(${pos}%)`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// --- Détection desktop (scroll classique) ---
+let lastScrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY) direction = -1;
+  else if (currentScrollY < lastScrollY) direction = 1;
+  lastScrollY = currentScrollY;
+});
+
+// --- Détection mobile (mouvements tactiles) ---
+let touchStartY = 0;
+window.addEventListener('touchstart', (e) => {
+  touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener('touchmove', (e) => {
+  const touchEndY = e.touches[0].clientY;
+
+  // Si on glisse vers le haut (scroll vers le bas)
+  if (touchEndY < touchStartY) {
+    direction = -1;
   }
+  // Si on glisse vers le bas (scroll vers le haut)
+  else if (touchEndY > touchStartY) {
+    direction = 1;
+  }
+});
 
-  const tl = gsap.to(marquee, {
-    xPercent: -50,
-    duration: 10,
-    ease: "none",
-    repeat: -1,
-  });
-
-  let lastScroll = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > lastScroll) {
-      // on descend → défile vers la gauche
-      tl.timeScale(1);
-    } else {
-      // on monte → défile vers la droite
-      tl.timeScale(-1);
-    }
-
-    lastScroll = currentScroll;
-  });
+// Ajustement lors d’un redimensionnement
+window.addEventListener('resize', () => {
+  wrapWidth = wrap1.getBoundingClientRect().width;
+  wrap1.style.left = "0px";
+  wrap2.style.left = `${wrapWidth}px`;
+});
 });

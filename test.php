@@ -1,155 +1,231 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Texte défilant GSAP</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouton animé GSAP</title>
   <style>
-    body {
-      height: 200vh; /* pour pouvoir scroller */
-      background: #111;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-      font-family: sans-serif;
-    }
 
-    .wrapper {
-      overflow: hidden;
-      width: 100vw;
-      white-space: nowrap;
-    }
-
-    .marquee {
-      display: inline-block;
-      white-space: nowrap;
-      font-size: 3rem;
-      font-weight: 600;
-      color: white;
-      will-change: transform;
-    }
-
-    .marquee span {
-      margin: 0 1rem;
-    }
-
-
-
-
-    .work_template_image {
+html, body {
+  height: 200vh;
+  font-family: 'GeneralSans-Variable', sans-serif;
+}
+/* BUTTON ROND */
+button {
+    cursor: pointer;
+}
+button {
+    border-radius: 1000px;
+    font-size: 14px;
+    overflow: hidden;
     position: relative;
-    display: inline-block;
+}
+.button_text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
 }
 
-.image_link img {
-    display: block;
-    width: 100%;
-    height: auto;
+.button_filler {
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  background: var(--fillerColor);
+  transform: none;
+  z-index: 1;
 }
 
-/* Les deux liens cachés par défaut */
-.work_template_image_more {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 10px;
+/* Spécifique à ton bouton "close" */
+.close, .menu {
+  --baseColor: #222;
+  --fillerColor: #ff0000;
+  --hoverTextColor: #ffffff;
+}
+
+/* Animations */
+.hover-in .button_text {
+  animation: textHoverIn 0.5s forwards;
+}
+.hover-in .button_filler {
+  animation: fillerHoverIn 0.8s forwards;
+}
+
+.hover-out .button_text {
+  animation: textHoverOut 0.5s forwards;
+}
+.hover-out .button_filler {
+  animation: fillerHoverOut 0.8s forwards;
+}
+
+/* Keyframes */
+@keyframes textHoverIn {
+  0% {
     opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-
-.work_template_image:hover .work_template_image_more {
+  }
+  1% {
+    transform: translateY(-100%);
     opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    color: var(--hoverTextColor);
+  }
 }
+
+@keyframes textHoverOut {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillerHoverIn {
+  0% {
+    transform: translate3d(0, 75%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fillerHoverOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -75%, 0);
+  }
+}
+/* FIN BUTTON ROND */
+/* CSS PORTFOLIO */
+.container_bouton_header {
+  position: fixed;
+  top: 25px;
+  right: 5%;
+  z-index: 100;
+  transform: scale(1); /* invisible au départ */
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.container_bouton_header button {
+    height: 70px;
+    width: 70px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 1000px;
+    font-size: 14px;
+    position: relative;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+    display: grid;
+  place-items: center;
+  transform-origin: center;
+}
+
   </style>
 </head>
-
 <body>
-  <div class="wrapper">
-    <h1 class="marquee">
-      Matthieu Afane <span>—</span> Matthieu Afane <span>—</span> Matthieu Afane <span>—</span> Matthieu Afane <span>—</span> Matthieu Afane <span>—</span>
-    </h1>
-  </div>
 
-
-  <figure class="work_template">
-    <div class="work_template_image">
-        <a href="#" class="image_link">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.tU1NAZ2vUoqqNIMhyPuV0QHaF2?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="TWICE">
-        </a>
-        <div class="work_template_image_more">
-            <a href="#">View</a>
-            <a href="#">Code source</a>
+    
+        <div class="container_bouton_header">
+            <button class="menu" type="button">
+               <span class="button_text">Menu</span>
+                <div class="button_filler"></div>
+            </button>
         </div>
-    </div>
-    <div class="work_template_info">
-        <div class="work_template_info_header">
-            <div class="work_template_info_header_title">
-                <h3>TWICE</h3>
-            </div>
-        </div>
-        <div class="work_template_info_content">
-            <div class="typeANDdate">
-                <h4 class="type">Development</h4>
-                <h4 class="date">2024</h4>
-            </div>
-            <div class="technology">
-                <p>HTML CSS JS PHP</p>
-            </div>
-        </div>
-    </div>
-</figure>
 
 
-  <!-- GSAP -->
+  <!-- Importation de GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (!window.gsap) {
-        console.error("❌ GSAP n'est pas chargé !");
-        return;
-      }
 
-      console.log("✅ GSAP est bien chargé, animation du texte...");
+  // affiche bouton menu lorsqu'il depasse section#home
+// const homeSection = document.getElementById('home');
+// const menu = document.querySelector('.container_bouton_header');
 
-      const marquee = document.querySelector(".marquee");
+// window.addEventListener('scroll', () => {
+//   const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
+//   const scrollY = window.scrollY;
 
-      if (!marquee) {
-        console.error("⚠️ Élément .marquee introuvable !");
-        return;
-      }
+//   if (scrollY >= homeBottom) {
+//     // Affiche le bouton avec effet scale
+//      menu.style.transform = 'scale(1)';
+//       menu.style.opacity = '1';
+//       menu.style.pointerEvents = 'auto';
+//   } else {
+//     // Cache et désactive le bouton
+//      menu.style.transform = 'scale(0)';
+//       menu.style.opacity = '0';
+//       menu.style.pointerEvents = 'none';
+//   }
+// }); 
+  // const buttons = document.querySelectorAll("button");
+  // buttons.forEach((button) => {
+  //   button.addEventListener("mouseenter", () => {
+  //     button.classList.remove("hover-out");
+  //     button.classList.add("hover-in");
+  //   });
+  //   button.addEventListener("mouseleave", () => {
+  //     button.classList.remove("hover-in");
+  //     button.classList.add("hover-out");
+  //   });
+  // });
 
-      // Animation infinie du texte vers la gauche
-      const tl = gsap.to(marquee, {
-        xPercent: -50,
-        duration: 10,
-        ease: "none",
-        repeat: -1
+// FRONTIERE  EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+    // s'assurer que le bouton existe et que GSAP est chargé
+    const button = document.querySelector('.menu');
+    if (!button) {
+      console.error('Bouton .menu introuvable');
+    } else if (!window.gsap) {
+      console.error('GSAP non chargé');
+    } else {
+      let rect = button.getBoundingClientRect();
+
+      // Mettre à jour le rect au resize / à l'entrée de la souris
+      const updateRect = () => rect = button.getBoundingClientRect();
+      window.addEventListener('resize', updateRect);
+      button.addEventListener('mouseenter', updateRect);
+
+      button.addEventListener('mousemove', (e) => {
+        // IMPORTANT : utiliser clientX / clientY (coordonnées viewport)
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        const localX = mouseX - rect.left;
+        const localY = mouseY - rect.top;
+
+        // calcul translation centrée
+        const tx = (localX - rect.width / 2) * 0.4;
+        const ty = (localY - rect.height / 2) * 0.4;
+
+        // limite la translation pour éviter gros sauts
+        const max = 22; // px
+        const clamp = (v) => Math.max(-max, Math.min(max, v));
+
+        gsap.to(button, {
+          x: clamp(tx),
+          y: clamp(ty),
+          duration: 0.45,
+          ease: "power3.out"
+        });
       });
 
-      // Détection du sens du scroll
-      let lastScroll = window.scrollY;
-
-      window.addEventListener("scroll", () => {
-        const currentScroll = window.scrollY;
-
-        if (currentScroll > lastScroll) {
-          // Descente → défile vers la gauche
-          tl.timeScale(1);
-        } else {
-          // Montée → défile vers la droite
-          tl.timeScale(-1);
-        }
-
-        lastScroll = currentScroll;
+      button.addEventListener('mouseleave', () => {
+        gsap.to(button, { x: 0, y: 0, duration: 0.45, ease: "power3.out" });
       });
-    });
+    }
+
   </script>
 </body>
 </html>
+
+
