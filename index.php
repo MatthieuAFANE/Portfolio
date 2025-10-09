@@ -32,7 +32,7 @@
             </button>
         </div>
     </header>
-    <div class="container_nav">
+    <!-- <div class="container_nav">
         <div class="container_nav_header">
             <div class="logo">
                 <span>©</span>
@@ -67,7 +67,67 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
+    <div class="container_nav">
+		<div class="container_nav_header">
+            <div class="logo">
+                <span>©</span>
+                <span>Code by Matthieu</span>
+            </div>
+            <div class="container_bouton_nav">
+                <button id="elastic" class="close" type="button">
+                    <span class="button_text">Close</span>
+                    <div class="button_filler"></div>
+                </button>
+            </div>
+        </div>
+		<div class="socials">
+            <ul>
+            <li><a id="underline" href="#">GitHub</a></li>
+            <li><a id="underline" href="#">Twitter</a></li>
+            <li><a id="underline" href="#">Instagram</a></li>
+            <li><a id="underline" href="#">LinKedIn</a></li>
+            </ul>
+		</div>
+		<nav class="container_menu">
+			<div class="menu__item">
+				<a class="menu__item-link">Home</a>
+				<img class="menu__item-img" src="menu-img-one.jpg" />
+				<div class="marquee">
+					<div class="marquee__inner">
+						<span>Home - Home - Home - Home - Home - Home - Home</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">Work</a>
+				<img class="menu__item-img" src="menu-img-two.jpg" />
+				<div class="marquee">
+					<div class="marquee__inner">
+						<span>Work - Work - Work - Work - Work - Work - Work</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">About</a>
+				<img class="menu__item-img" src="menu-img-three.jpg" />
+				<div class="marquee">
+					<div class="marquee__inner">
+						<span>About - About - About - About - About - About - About</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">Contact</a>
+				<img class="menu__item-img" src="menu-img-four.jpg" />
+				<div class="marquee">
+					<div class="marquee__inner">
+						<span>Contact - Contact - Contact - Contact - Contact - Contact - Contact</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
     <main>
         <section id="home">
             <div class="container_home">

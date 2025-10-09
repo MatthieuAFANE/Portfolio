@@ -1,231 +1,288 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bouton animé GSAP</title>
-  <style>
-
-html, body {
-  height: 200vh;
-  font-family: 'GeneralSans-Variable', sans-serif;
-}
-/* BUTTON ROND */
-button {
-    cursor: pointer;
-}
-button {
-    border-radius: 1000px;
-    font-size: 14px;
-    overflow: hidden;
-    position: relative;
-}
-.button_text {
-  position: relative;
-  z-index: 2;
-  transition: color 0.3s ease;
-}
-
-.button_filler {
-  position: absolute;
-  top: -50%;
-  left: -25%;
-  width: 150%;
-  height: 200%;
-  border-radius: 50%;
-  background: var(--fillerColor);
-  transform: none;
-  z-index: 1;
-}
-
-/* Spécifique à ton bouton "close" */
-.close, .menu {
-  --baseColor: #222;
-  --fillerColor: #ff0000;
-  --hoverTextColor: #ffffff;
-}
-
-/* Animations */
-.hover-in .button_text {
-  animation: textHoverIn 0.5s forwards;
-}
-.hover-in .button_filler {
-  animation: fillerHoverIn 0.8s forwards;
-}
-
-.hover-out .button_text {
-  animation: textHoverOut 0.5s forwards;
-}
-.hover-out .button_filler {
-  animation: fillerHoverOut 0.8s forwards;
-}
-
-/* Keyframes */
-@keyframes textHoverIn {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    color: var(--hoverTextColor);
-  }
-}
-
-@keyframes textHoverOut {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    transform: translateY(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes fillerHoverIn {
-  0% {
-    transform: translate3d(0, 75%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fillerHoverOut {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, -75%, 0);
-  }
-}
-/* FIN BUTTON ROND */
-/* CSS PORTFOLIO */
-.container_bouton_header {
-  position: fixed;
-  top: 25px;
-  right: 5%;
-  z-index: 100;
-  transform: scale(1); /* invisible au départ */
-  opacity: 1;
-  transition: all 0.2s ease;
-}
-.container_bouton_header button {
-    height: 70px;
-    width: 70px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 1000px;
-    font-size: 14px;
-    position: relative;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
-    display: grid;
-  place-items: center;
-  transform-origin: center;
-}
-
-  </style>
-</head>
-<body>
-
-    
-        <div class="container_bouton_header">
-            <button class="menu" type="button">
-               <span class="button_text">Menu</span>
-                <div class="button_filler"></div>
-            </button>
-        </div>
-
-
-  <!-- Importation de GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script>
-
-  // affiche bouton menu lorsqu'il depasse section#home
-// const homeSection = document.getElementById('home');
-// const menu = document.querySelector('.container_bouton_header');
-
-// window.addEventListener('scroll', () => {
-//   const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
-//   const scrollY = window.scrollY;
-
-//   if (scrollY >= homeBottom) {
-//     // Affiche le bouton avec effet scale
-//      menu.style.transform = 'scale(1)';
-//       menu.style.opacity = '1';
-//       menu.style.pointerEvents = 'auto';
-//   } else {
-//     // Cache et désactive le bouton
-//      menu.style.transform = 'scale(0)';
-//       menu.style.opacity = '0';
-//       menu.style.pointerEvents = 'none';
-//   }
-// }); 
-  // const buttons = document.querySelectorAll("button");
-  // buttons.forEach((button) => {
-  //   button.addEventListener("mouseenter", () => {
-  //     button.classList.remove("hover-out");
-  //     button.classList.add("hover-in");
-  //   });
-  //   button.addEventListener("mouseleave", () => {
-  //     button.classList.remove("hover-in");
-  //     button.classList.add("hover-out");
-  //   });
-  // });
-
-// FRONTIERE  EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-    // s'assurer que le bouton existe et que GSAP est chargé
-    const button = document.querySelector('.menu');
-    if (!button) {
-      console.error('Bouton .menu introuvable');
-    } else if (!window.gsap) {
-      console.error('GSAP non chargé');
-    } else {
-      let rect = button.getBoundingClientRect();
-
-      // Mettre à jour le rect au resize / à l'entrée de la souris
-      const updateRect = () => rect = button.getBoundingClientRect();
-      window.addEventListener('resize', updateRect);
-      button.addEventListener('mouseenter', updateRect);
-
-      button.addEventListener('mousemove', (e) => {
-        // IMPORTANT : utiliser clientX / clientY (coordonnées viewport)
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-
-        const localX = mouseX - rect.left;
-        const localY = mouseY - rect.top;
-
-        // calcul translation centrée
-        const tx = (localX - rect.width / 2) * 0.4;
-        const ty = (localY - rect.height / 2) * 0.4;
-
-        // limite la translation pour éviter gros sauts
-        const max = 22; // px
-        const clamp = (v) => Math.max(-max, Math.min(max, v));
-
-        gsap.to(button, {
-          x: clamp(tx),
-          y: clamp(ty),
-          duration: 0.45,
-          ease: "power3.out"
-        });
-      });
-
-      button.addEventListener('mouseleave', () => {
-        gsap.to(button, { x: 0, y: 0, duration: 0.45, ease: "power3.out" });
-      });
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Fullscreen Overlay Responsive Navigation Menu Using GSAP</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<style>
+          * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-  </script>
-</body>
+    html, body {
+      height: 100%;
+      font-family: 'GeneralSans-Variable', sans-serif;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+      background: none;
+      border: none;
+      outline: none;
+    }
+</style>
+    <style>
+@import url('assets/css/clash-display.css');
+@import url('assets/css/general-sans.css');
+      * {
+	/* font-family: "Neue Montreal"; */
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	background: #161616;
+  font-family: 'GeneralSans-Variable', sans-serif;
+}
+
+.menu {
+	color: #fff;
+}
+
+.menu-open,
+.menu-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 40px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.socials {
+	position: absolute;
+	bottom: 40px;
+	left: 5%;
+}
+
+.socials ul {
+  display: flex;
+}
+
+.socials ul li a {
+	text-transform: uppercase;
+	margin: 0 20px;
+	letter-spacing: 0px;
+  font-weight: 500;
+  color: #1c1d20;
+}
+
+.socials ul li a:not(last-child) {
+  margin-right: 20px
+}
+
+.container_nav {
+	position: fixed;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+  padding: 40px 5%;
+}
+
+.container_nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menu__item {
+	position: relative;
+}
+
+.menu__item-link {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: opacity 0.4s;
+  font-weight: 500;
+}
+
+.menu__item-link::before {
+	all: initial;
+	counter-increment: menu;
+	position: absolute;
+	bottom: 60%;
+	left: 0;
+	pointer-events: none;
+}
+
+.menu__item-link:hover {
+	transition-duration: 0.1s;
+	opacity: 0;
+}
+
+.menu__item-img {
+	z-index: 2;
+	pointer-events: none;
+	position: absolute;
+	height: 12vh;
+	max-height: 600px;
+	opacity: 0;
+	left: 8%;
+	top: 10%;
+	transform: scale(0);
+}
+
+.menu__item-link:hover + .menu__item-img {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 0.4s;
+}
+
+.contaier_menu {
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+}
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	color: rgb(214, 214, 214);
+	pointer-events: none;
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transition: all 0.1s;
+	transform: translateX(60px);
+}
+
+.menu__item-link:hover ~ .marquee .marquee__inner {
+	opacity: 1;
+	transform: translateX(0px);
+	transition-duration: 0.4s;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: max(5rem, 5vw);
+	line-height: 1.15;
+}
+
+.marquee span {
+	font-style: italic;
+}
+    </style>
+	</head>
+
+	<body>
+		<div class="menu">menu</div>
+    
+		<div class="container_nav">
+			<div class="container_nav_header">
+            <div class="logo">
+                <span>©</span>
+                <span>Code by Matthieu</span>
+            </div>
+            <div class="container_bouton_nav">
+                <button id="elastic" class="close" type="button">
+                    <span class="button_text">Close</span>
+                    <div class="button_filler"></div>
+                </button>
+            </div>
+        </div>
+			<div class="socials">
+				<ul>
+          <li><a id="underline" href="#">GitHub</a></li>
+          <li><a id="underline" href="#">Twitter</a></li>
+          <li><a id="underline" href="#">Instagrame</a></li>
+          <li><a id="underline" href="#">LinKedin</a></li>
+        </ul>
+			</div>
+			<nav class="contaier_menu">
+				<div class="menu__item">
+					<a class="menu__item-link">Home</a>
+					<img class="menu__item-img" src="menu-img-one.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Home - Home - Home - Home - Home - Home - Home</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link">Work</a>
+					<img class="menu__item-img" src="menu-img-two.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Work - Work - Work - Work - Work - Work - Work</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link">About</a>
+					<img class="menu__item-img" src="menu-img-three.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>About - About - About - About - About - About - About</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link">Contact</a>
+					<img class="menu__item-img" src="menu-img-four.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Contact - Contact - Contact - Contact - Contact - Contact - Contact</span>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<script>
+			var t1 = new TimelineMax({ paused: true });
+
+			t1.to(".container_nav", 1, {
+				left: 0,
+				ease: Expo.easeInOut,
+			});
+
+			t1.staggerFrom(
+				".contaier_menu > div",
+				0.8,
+				{ y: 100, opacity: 0, ease: Expo.easeOut },
+				"0.1",
+				"-=0.4"
+			);
+
+			t1.staggerFrom(
+				".socials",
+				0.8,
+				{ y: 100, opacity: 0, ease: Expo.easeOut },
+				"0.4",
+				"-=0.6"
+			);
+
+t1.reverse();
+
+document.querySelectorAll('.menu, .close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    t1.reversed(!t1.reversed());
+  });
+});
+
+		</script>
+	</body>
 </html>
-
-
