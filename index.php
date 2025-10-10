@@ -144,9 +144,6 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                
-                
             </div>
         </section>
         <section id="work">
@@ -162,42 +159,48 @@
                 </div>
                 <div class="container_work_content">
                     <figure class="work_template">
-                        <div class="work_template_image_more">
-                            <a href="#" class="work_template_image">
-                                <img src="https://tse4.mm.bing.net/th/id/OIP.tU1NAZ2vUoqqNIMhyPuV0QHaF2?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
-                            </a>
-                            <div class="overlay"></div> <!-- filtre sombre -->
-                            <div class="work_template_more">
-                                    <a class="code" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
-                                        <span>Source code</span>
-                                    </a>
-                                    <a class="view" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#fff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
-                                    </a>
+                        <a href="#" class="work_template_link">
+                            <div class="work_template_image_more">
+                                <img src="https://assets.awwwards.com/awards/submissions/2025/08/68af13d98621f852628699.jpg" alt="">
                             </div>
-                        </div>
-                        
-                        <div class="work_template_info">
-                            <div class="work_template_info_header">
-                                <div class="work_template_info_header_title">
-                                    <h3>TWICE</h3>
-                                </div>
-                            </div>
-                            <div class="work_template_info_content">
-                                <div class="typeANDdate">
-                                    <h4 class="type">Development</h4>
+                            
+                            <div class="work_template_info">
+                                <div class="work_template_info_header">
+                                    <h4 class="technology">HTML • CSS • JS • PHP</h4>
                                     <h4 class="date">2024</h4>
                                 </div>
-                                <div class="technology">
-                                    <p>HTML CSS JS PHP</p>
+                                <div class="work_template_info_content">
+                                    <div class="work_template_info_content_title">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                                        <h3>TWICE</h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </figure>
+                    <figure class="work_template">
+                        <a href="#" class="work_template_link">
+                            <div class="work_template_image_more">
+                                <img src="https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/688443b774d62163098050.jpg" alt="">
+                            </div>
+                            
+                            <div class="work_template_info">
+                                <div class="work_template_info_header">
+                                    <h4 class="technology">HTML • CSS • JS • PHP</h4>
+                                    <h4 class="date">2024</h4>
+                                </div>
+                                <div class="work_template_info_content">
+                                    <div class="work_template_info_content_title">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                                        <h3>HONDA</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </figure>
                     <figure class="work_template">
                         <div class="work_template_image">
-                            <img src="https://tse4.mm.bing.net/th/id/OIP.tU1NAZ2vUoqqNIMhyPuV0QHaF2?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                            <img src="https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/688443b774d62163098050.jpg" alt="">
                         </div>
                         <div class="work_template_info">
                             <div class="work_template_info_header">
