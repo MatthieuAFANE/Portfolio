@@ -189,128 +189,6 @@ window.addEventListener('resize', () => {
   wrap2.style.left = `${wrapWidth}px`;
 });
 
-
-
-
-// test
-// OUVERTURE DE LA NAV
-// function openNav() {
-//   const nav = document.querySelector('.container_nav');
-//   gsap.timeline()
-//     .set(nav, { display: 'block' })
-//     .to(nav, {
-//       top: "0",
-//       opacity: 1,
-//       duration: 1,
-//       ease: "power4.inOut" // lent au début, rapide à la fin
-//     })
-//     .to(
-//       [".container_nav_header", "nav", ".container_social"],
-//       {
-//         opacity: 1,
-//         y: 0,
-//         stagger: 0.15,
-//         duration: 0.6,
-//         ease: "power2.out"
-//       },
-//       "-=0.5" // commence avant la fin du slide
-//     );
-// }
-
-// // FERMETURE DE LA NAV
-// function closeNav() {
-//   const nav = document.querySelector('.container_nav');
-//   gsap.timeline()
-//     .to(
-//       [".container_nav_header", "nav", ".container_social"],
-//       {
-//         opacity: 0,
-//         y: 30,
-//         stagger: 0.1,
-//         duration: 0.4,
-//         ease: "power2.in"
-//       }
-//     )
-//     .to(nav, {
-//       top: "-100%",
-//       opacity: 0,
-//       duration: 1,
-//       ease: "power4.inOut"
-//     }, "-=0.2")
-//     .set(nav, { display: 'none' });
-// }
-
-// Sélection des éléments
-// const navLinks = document.querySelectorAll('.container_nav nav ul li');
-// const socials = document.querySelector('.container_social');
-// const logo = document.querySelector('.container_nav_header .logo');
-
-// // Timeline GSAP (préparée mais en pause)
-// const navTl = gsap.timeline({ paused: true, reversed: true });
-
-// // Animation d’ouverture
-// navTl
-//   .set(containerNav, { display: 'initial' }) // s’assure que le menu est visible
-//   .to(containerNav, {
-//     y: 0,
-//     opacity: 1,
-//     duration: 0.5,
-//     ease: "power4.out",
-//   })
-//   .from(logo, {
-//     opacity: 0,
-//     y: -30,
-//     duration: 0.1,
-//     ease: "power3.out"
-//   }, "-=0.4")
-//   .from(navLinks, {
-//     opacity: 0,
-//     y: 40,
-//     duration: 0.4,
-//     ease: "power3.out",
-//     stagger: 0.1
-//   }, "-=0.3")
-//   .from(socials, {
-//     opacity: 0,
-//     y: 50,
-//     duration: 0.2,
-//     ease: "power3.out"
-//   }, "-=0.3")
-//   .from(closeBtn, {
-//     opacity: 0,
-//     scale: 0.8,
-//     duration: 0.1,
-//     ease: "back.out(1.7)"
-//   }, "-=0.2");
-
-// // Animation de fermeture
-// const toggleNav = () => {
-//   if (navTl.reversed()) {
-//     navTl.play(); // ouverture
-//     containerNav.classList.add("active");
-//   } else {
-//     navTl.reverse(); // fermeture
-//     containerNav.classList.remove("active");
-//   }
-// };
-
-// // Boutons pour ouvrir/fermer
-// menuBtn.addEventListener('click', toggleNav);
-// closeBtn.addEventListener('click', toggleNav);
-
-
-// const siteContent = document.querySelector('main') || document.body;
-// navTl.to(siteContent, {
-//   filter: "blur(6px)",
-//   duration: 0.6,
-//   ease: "power2.out"
-// }, 0);
-// navTl.to(siteContent, {
-//   filter: "blur(0px)",
-//   duration: 0.6,
-//   ease: "power2.in"
-// }, "close");
-
 // ANIMATION APPARITION NAV HAMBURGER
   // --- Timeline principale ---
   const t1 = new TimelineMax({ paused: true });
@@ -367,5 +245,6 @@ t1.from(".container_nav .socials li a", {
   });
 
 
+  // test
 
 });

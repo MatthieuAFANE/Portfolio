@@ -223,8 +223,9 @@ button.menu .button_text {
 
 .container_nav .socials ul {
   display: flex;
-    align-items: flex-end; /* <— autorise les <a> à bouger verticalement */
+  align-items: flex-end; /* <— autorise les <a> à bouger verticalement */
   overflow: hidden; 
+  padding: 10px 0;
 }
 
 .container_nav .socials ul li a {
@@ -594,12 +595,11 @@ section#work {
   font-weight: 400;
 }
 .container_footer_edition_socials .socials ul li a#underline::after {
-  height: 2px;
+  height: 1px;
 }
 .container_footer_edition_socials .socials ul li:not(:last-child) {
   margin-right: 10px;
 }
 /* FIN FOOTER */
 /*test*/
-
 

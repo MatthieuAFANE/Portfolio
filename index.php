@@ -83,10 +83,10 @@
         </div>
 		<div class="socials">
             <ul>
-            <li><a id="underline" href="#">GitHub</a></li>
-            <li><a id="underline" href="#">Twitter</a></li>
-            <li><a id="underline" href="#">Instagram</a></li>
-            <li><a id="underline" href="#">LinKedIn</a></li>
+                <li><a id="underline" href="#">GitHub</span></a></li>
+                <li><a id="underline" href="#">Twitter</a></li>
+                <li><a id="underline" href="#">Instagram</a></li>
+                <li><a id="underline" href="#">LinkedIn</a></li>
             </ul>
 		</div>
 		<nav class="container_menu">
