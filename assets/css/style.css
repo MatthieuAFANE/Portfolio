@@ -410,12 +410,12 @@ section#work {
   font-size: 70px;
   font-weight: 500;
 }
-.contaier_work_header_display {
+.container_work_header_display {
   width: 110px;
   display: flex;
   justify-content: space-between;
 }
-.contaier_work_header_display button {
+.contanier_work_header_display button {
   width: 50px;
   height: 50px;
   border: 1px solid #dfdfdf;
@@ -424,7 +424,7 @@ section#work {
   margin-top: 40px;
   display: grid;                 /* Active le mode grid */
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: 2.5%;  
+  gap: 40px; 
   width: 100%;
 }
 .work_template {
