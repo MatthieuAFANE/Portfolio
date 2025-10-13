@@ -205,7 +205,7 @@
                     <section class="dark">
                     <figure>
                         <blockquote>
-                        <p class="js-split-letters" style="font-size: 9vw">MON OBJECTIF ?</p>
+                        <p class="js-split-letters big">MON OBJECTIF ?</p>
                         </blockquote>
                         <figcaption>— Objectif</figcaption>
                     </figure>
@@ -230,7 +230,9 @@
                     </section> -->
 
                     <section class="dark tech-tools">
-                        <h2>Technologies & Tools</h2>
+                        <blockquote>
+                            <p class="js-split-letters">Technologies & Tools</p>
+                        </blockquote>
                         <div class="tech-buttons">
                             <button>Culture & Education</button>
                             <button>Music & Sound</button>

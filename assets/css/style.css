@@ -639,6 +639,10 @@ p.js-split-letters {
   overflow: visible;
   display: inline-block;
 }
+p.js-split-letters.big {
+    font-size: 7.8vw;
+    font-family: 'ClashDisplay-Variable', sans-serif;
+}
 .word { display: inline-block; }
 .char { display: inline-block; will-change: color; transition: color 0.3s ease; }
 .space { display: inline-block; width: 0.35em; }
@@ -681,8 +685,8 @@ section.light:last-of-type .cta:hover {
   flex-direction: column;
 }
 
-.tech-tools h2 {
-  font-size: clamp(1.8rem, 4vw, 3.6rem);
+.tech-tools blockquote p {
+  font-size: clamp(1.8rem, 5.9vw, 5.9vw);
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
@@ -711,5 +715,4 @@ section.light:last-of-type .cta:hover {
 .tech-buttons button:hover {
   background-color: #455CE9;
   color: #fff;
-  transform: scale(1.05);
 }
