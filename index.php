@@ -134,6 +134,44 @@
                 <div class="container_home_image">
                     <img src="assets/img/matthieuAfane1.png" alt="photo_Matthieu_Afane">
                 </div>
+                <div class="container_home_intro">
+                    <div class="intro">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+                        <h2>Web developer</h2>
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a title="mon github" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Github-Logo-2--Streamline-Logos" height="24" width="24">
+                                        <path d="M11.996 1.284a10.986 10.986 0 0 0 -3.472 21.412c0.548 0.095 0.722 -0.227 0.722 -0.517 0 -0.263 0.006 -0.991 0 -1.91 -3.057 0.662 -3.688 -1.448 -3.688 -1.448a2.907 2.907 0 0 0 -1.22 -1.607c-0.997 -0.682 0.075 -0.669 0.075 -0.669a2.307 2.307 0 0 1 1.683 1.131 2.34 2.34 0 0 0 3.197 0.914 2.34 2.34 0 0 1 0.697 -1.464c-2.439 -0.279 -5.004 -1.22 -5.004 -5.432a4.248 4.248 0 0 1 1.132 -2.948 3.942 3.942 0 0 1 0.107 -2.907s0.924 -0.295 3.02 1.128a10.402 10.402 0 0 1 5.503 0c2.102 -1.422 3.018 -1.128 3.018 -1.128 0.405 0.92 0.444 1.96 0.109 2.907a4.243 4.243 0 0 1 1.13 2.95c0 4.223 -2.569 5.15 -5.016 5.42a2.604 2.604 0 0 1 0.752 2.026v3.041c0 0.294 0.177 0.619 0.735 0.512a10.986 10.986 0 0 0 -3.48 -21.411Z" stroke-width="1"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="mon linkedin" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Linkedin-Logo--Streamline-Logos" height="24" width="24">
+                                        <path fill-rule="evenodd" d="M3.5 6a2.5 2.5 0 1 0 0 -5 2.5 2.5 0 0 0 0 5ZM6 23V8H1v15h5ZM8 8h4.5v1.946C13.216 9.005 14.746 8 17.5 8c4.33 0 5.5 4.32 5.5 7v8h-5v-8c0 -1 -0.5 -3 -2.5 -3 -1.42 0 -2.42 1.008 -3 1.951V23H8V8Z" clip-rule="evenodd" stroke-width="1"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="mon twitter" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Twitter-Logo-1--Streamline-Logos" height="24" width="24">
+                                        <path d="M1 19c15.617 6.062 20.038 -5.025 19.905 -10.5C22.173 8.156 23 7.292 23 6.406c-1.048 0.55 -1.595 0.394 -2.119 0 1.128 -0.768 1.071 -1.863 1.071 -2.619 -0.527 0.277 -1.503 0.96 -2.619 1.048 -0.745 -1.166 -2.619 -2.095 -5.238 -1.048 -2.619 1.048 -3.143 3.842 -2.619 5.238 -3.352 0 -7.333 -3.492 -8.905 -5.238 -1.883 2.688 0.5 5.353 1.572 6.286 -0.715 0.214 -1.572 0 -2.095 -0.524 0 2.991 2.619 4.19 3.666 4.715H3.62c0 2.095 2.444 2.968 3.667 3.142 -0.838 0.838 -4.215 1.596 -6.286 1.596Z" stroke-width="1"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="mon e-mail" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Google-Mail-Logo--Streamline-Logos" height="24" width="24">
+                                    <path fill-rule="evenodd" d="M1 6.5A2.5 2.5 0 0 1 3.5 4h0.782a2.5 2.5 0 0 1 1.442 0.458l1.276 0.9v7.514L1 8.437V6.5Zm0 3.802V20h6v-5.263l-6 -4.435Zm16 4.435V20h6v-9.698l-6 4.435Zm6 -6.3V6.5A2.5 2.5 0 0 0 20.5 4h-0.782a2.5 2.5 0 0 0 -1.442 0.458l-1.276 0.9v7.514l6 -4.435Zm-7.5 -2.02L12 8.888l-3.5 -2.47v7.562l3.5 2.587 3.5 -2.587V6.417Z" clip-rule="evenodd" stroke-width="1"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="container_home_element">
                     <div class="wrapper">
                         <div class="name_wrap">
@@ -146,7 +184,73 @@
                 </div>
             </div>
         </section>
-        section#about
+        <section id="about">
+           <div class="myStackAbout">
+
+                <!-- HOME -->
+
+
+                <!-- ABOUT ME -->
+                <div class="about-me">
+
+                    <section class="light">
+                    <figure>
+                        <blockquote>
+                        <p class="js-split-letters">Actuellement étudiant en informatique à l'IUT de Reims-Châlons-Charleville, je transforme le code en projets concrets.</p>
+                        </blockquote>
+                        <figcaption>— Moi</figcaption>
+                    </figure>
+                    </section>
+
+                    <section class="dark">
+                    <figure>
+                        <blockquote>
+                        <p class="js-split-letters" style="font-size: 9vw">MON OBJECTIF ?</p>
+                        </blockquote>
+                        <figcaption>— Objectif</figcaption>
+                    </figure>
+                    </section>
+
+                    <section class="light">
+                    <figure>
+                        <blockquote>
+                        <p class="js-split-letters">Transformer vos idées en expériences visuelles mémorables.</p>
+                        </blockquote>
+                        <figcaption>— Vision</figcaption>
+                    </figure>
+                    </section>
+
+                    <!-- <section class="dark">
+                    <figure>
+                        <blockquote>
+                        <p class="js-split-letters">Du concret, zéro blabla.</p>
+                        </blockquote>
+                        <figcaption>— Promesse</figcaption>
+                    </figure>
+                    </section> -->
+
+                    <section class="dark tech-tools">
+                        <h2>Technologies & Tools</h2>
+                        <div class="tech-buttons">
+                            <button>Culture & Education</button>
+                            <button>Music & Sound</button>
+                            <button>Web & Interactive</button>
+                            <button>Clean</button>
+                            <button>Parallax</button>
+                            <button>Typography</button>
+                            <button>Sound-Audio</button>
+                            <button>Storytelling</button>
+                            <button>Photo & Video</button>
+                            <button>GSAP</button>
+                            <button>Nuxt.js</button>
+                        </div>
+                    </section>
+
+
+                </div>
+
+            </div>
+        </section>
         <section id="work">
             <div class="container_work">
                 <div class="container_work_header">

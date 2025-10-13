@@ -246,5 +246,88 @@ t1.from(".container_nav .socials li a", {
 
 
   // test
+  gsap.registerPlugin(ScrollTrigger);
 
+  const container = document.querySelector('.myStackAbout');
+  const aboutSections = container.querySelectorAll('.about-me section');
+
+  // Split texte en mots puis lettres
+  const splitWordsAndChars = (el) => {
+    const words = el.textContent.split(' ');
+    el.textContent = '';
+
+    words.forEach((word, wIdx) => {
+      const wordSpan = document.createElement('span');
+      wordSpan.className = 'word';
+      [...word].forEach(char => {
+        const charSpan = document.createElement('span');
+        charSpan.className = 'char';
+        charSpan.textContent = char;
+        wordSpan.appendChild(charSpan);
+      });
+
+      if (wIdx < words.length - 1) {
+        const space = document.createElement('span');
+        space.className = 'space';
+        space.innerHTML = '&nbsp;';
+        wordSpan.appendChild(space);
+      }
+
+      el.appendChild(wordSpan);
+    });
+  };
+
+  container.querySelectorAll('.js-split-letters').forEach(el => splitWordsAndChars(el));
+
+  // Lettres animées
+  container.querySelectorAll('.js-split-letters').forEach(el => {
+    const section = el.closest('section');
+    const isDark = section.classList.contains('dark');
+    const chars = el.querySelectorAll('.char');
+
+    gsap.fromTo(chars,
+      { color: isDark ? "var(--text-dim-dark)" : "var(--text-dim-light)" },
+      {
+        color: isDark ? "var(--text-bright-dark)" : "var(--text-bright-light)",
+        duration: 0.6,
+        stagger: 0.01,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 70%",
+          end: "bottom 40%",
+          scrub: 0.5,
+        }
+      }
+    );
+  });
+
+  // Effet de stack (chevauchement)
+  aboutSections.forEach((section, i) => {
+    if (i === aboutSections.length - 1) return;
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      endTrigger: aboutSections[i + 1],
+      end: "top top",
+      pin: true,
+      pinSpacing: false,
+      scrub: true
+    });
+  });
+
+  // CTA
+  container.querySelectorAll('.cta').forEach(el => {
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
 });

@@ -188,6 +188,7 @@ header .logo span {
     color: #fff;
     border-radius: 1000px;
     position: relative;
+    border: 1px solid #48494C;
 }
 button.menu .button_text {
   font-weight: 500;
@@ -393,7 +394,35 @@ section#home {
 .container_home_element .spacer {
   padding: 0 3vw;
 }
-
+.container_home_intro {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 7.5%;
+}
+.container_home_intro svg {
+  fill: #fff;
+}
+.container_home_intro .intro svg {
+  transform: rotate(90deg);
+}
+.container_home_intro .intro h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+.container_home_intro .social-icons ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.container_home_intro .social-icons ul li a svg {
+  transition: .1s;
+}
+.container_home_intro .social-icons ul li a:hover svg {
+  transform: scale(1.2);
+}
 /* FIN HOME */
 /* WORK */
 section#work {
@@ -565,3 +594,122 @@ section#work {
 /* FIN FOOTER */
 /*test*/
 
+:root {
+  --text-dim-dark: rgba(255,255,255,0.25);
+  --text-bright-dark: #ffffff;
+  --text-dim-light: rgba(0,0,0,0.3);
+  --text-bright-light: #000000;
+}
+
+section#about section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* About Me sections */
+.about-me section.dark {
+  background-color: #1C1D20;
+  color: var(--text-dim-dark);
+}
+
+.about-me section.light {
+  background-color: #fff;
+  color: var(--text-dim-light);
+}
+
+figure {
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+p.js-split-letters {
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+  overflow: visible;
+  display: inline-block;
+}
+.word { display: inline-block; }
+.char { display: inline-block; will-change: color; transition: color 0.3s ease; }
+.space { display: inline-block; width: 0.35em; }
+
+figcaption { font-size: 1rem; opacity: 0.6; margin-top: 1rem; }
+
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#ffd166,#ff6b6b);
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+/* Bouton spécifique pour la section CV */
+section.light:last-of-type .cta {
+  background: linear-gradient(135deg, #6a5af9, #43e97b);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+section.light:last-of-type .cta:hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #7b61ff, #4af488);
+}
+
+.tech-tools {
+  padding: 0 2rem;
+  flex-direction: column;
+}
+
+.tech-tools h2 {
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tech-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 550px;
+  justify-content: center;
+}
+
+.tech-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  color: #fff;
+  border: 1px solid #48494C;
+  background-color: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.tech-buttons button:hover {
+  background-color: #455CE9;
+  color: #fff;
+  transform: scale(1.05);
+}
