@@ -150,8 +150,8 @@
                             </li>
                             <li>
                                 <a title="mon linkedin" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Linkedin-Logo--Streamline-Logos" height="24" width="24">
-                                        <path fill-rule="evenodd" d="M3.5 6a2.5 2.5 0 1 0 0 -5 2.5 2.5 0 0 0 0 5ZM6 23V8H1v15h5ZM8 8h4.5v1.946C13.216 9.005 14.746 8 17.5 8c4.33 0 5.5 4.32 5.5 7v8h-5v-8c0 -1 -0.5 -3 -2.5 -3 -1.42 0 -2.42 1.008 -3 1.951V23H8V8Z" clip-rule="evenodd" stroke-width="1"></path>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
+                                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                                     </svg>
                                 </a>
                             </li>
@@ -162,13 +162,13 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a title="mon e-mail" href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Google-Mail-Logo--Streamline-Logos" height="24" width="24">
                                     <path fill-rule="evenodd" d="M1 6.5A2.5 2.5 0 0 1 3.5 4h0.782a2.5 2.5 0 0 1 1.442 0.458l1.276 0.9v7.514L1 8.437V6.5Zm0 3.802V20h6v-5.263l-6 -4.435Zm16 4.435V20h6v-9.698l-6 4.435Zm6 -6.3V6.5A2.5 2.5 0 0 0 20.5 4h-0.782a2.5 2.5 0 0 0 -1.442 0.458l-1.276 0.9v7.514l6 -4.435Zm-7.5 -2.02L12 8.888l-3.5 -2.47v7.562l3.5 2.587 3.5 -2.587V6.417Z" clip-rule="evenodd" stroke-width="1"></path>
                                     </svg>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -234,17 +234,18 @@
                             <p class="js-split-letters">Technologies & Tools</p>
                         </blockquote>
                         <div class="tech-buttons">
-                            <button>Culture & Education</button>
-                            <button>Music & Sound</button>
-                            <button>Web & Interactive</button>
-                            <button>Clean</button>
-                            <button>Parallax</button>
-                            <button>Typography</button>
-                            <button>Sound-Audio</button>
-                            <button>Storytelling</button>
-                            <button>Photo & Video</button>
+                            <button>GitHub & Gitlab</button>
+                            <button>CSS</button>
+                            <button>PHP</button>
+                            <button>C#</button>
+                            <button>HTML</button>
+                            <button>JS</button>
+                            <button>Python</button>
+                            <button>Symfony</button>
+                            <button>Figma</button>
                             <button>GSAP</button>
-                            <button>Nuxt.js</button>
+                            <button>SQL</button>
+                            <button>phpMyAdmin</button>
                         </div>
                     </section>
 
@@ -348,6 +349,49 @@
                 </div>
             </div>
         </section>
+        <section id="contact">
+            <div class="container_contact">
+                <div class="container_contact_left">
+                    <div class="title">
+                        <h2>
+                            <span>Let’s</span>
+                            <span>Get in</span>
+                            <span>Touch</span>
+                        </h2>
+                        <button type="button">
+                            <span class="button_text">matthieu.afane@gmail.com</span>
+                            <div class="button_filler"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="container_contact_right">
+                    <form action="#" methode="post">
+                        <div class="form_container">
+                            <label for="mail">Adresse mail</label>
+                            <input placeholder="Entrez votre e-mail" id="mail" type="mail" >
+                        </div>
+                        <div class="container_double">
+                            <div class="form_container">
+                                <label for="prenom">Prénom</label>
+                                <input placeholder="Entrez votre prénom"id="prenom" type="text">
+                            </div>
+                            <div class="form_container">
+                                <label for="nom">Nom</label>
+                                <input placeholder="Entrez votre nom" id="nom" name="nom" type="text">
+                            </div>
+                        </div>
+                        <div class="form_container">
+                            <label for="message">Message</label>
+                            <textarea placeholder="Entrez votre message" id="message" name="message" rows="4" cols="40"></textarea>
+                        </div>
+                        <button id="elastic" class="submit_message" type="submit">
+                            <span class="button_text">Send me</span>
+                            <div class="button_filler"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container_footer">
@@ -358,19 +402,6 @@
                 <div class="text">
                     <h2>Let's work together</h2>
                 </div>
-            </div>
-            <div class="container_footer_content">
-                <div class="container_button">
-                    <button type="button">
-                        <span class="button_text">matthieu.afane@gmail.com</span>
-                        <div class="button_filler"></div>
-                    </button>
-                    <button type="button">
-                        <span class="button_text">+33 07 71 83 21 41</span>
-                        <div class="button_filler"></div>
-                    </button>
-                </div>
-
             </div>
             <div class="container_footer_edition_socials">
                 <div class="edition">

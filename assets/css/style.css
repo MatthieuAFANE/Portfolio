@@ -518,6 +518,7 @@ section#work {
 .container_footer {
   background-color: #1C1D20;
   padding: 50px 5%;
+    border-top: 1px solid #48494C;
 }
 .container_footer_header {
   display: flex;
@@ -540,25 +541,8 @@ section#work {
   font-weight: 500;
   color: #fff;
 }
-.container_button {
-  display: flex;
-  margin: 40px 0 30px;
-}
-.container_button button {
-  border: 1px solid #48494C;
-  width: 220px;
-  height: 50px;
-  color: #fff;
-}
-.container_button button:first-child {
-  margin-right: 10px;
-}
-.container_button button .button_filler {
-  background-color: #455CE9;
-}
 .container_footer_edition_socials {
-  padding-top: 10px;
-  border-top: 1px solid #48494C;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -592,6 +576,91 @@ section#work {
   margin-right: 10px;
 }
 /* FIN FOOTER */
+/* CONTACT */
+section#contact .container_contact {
+  background-color: #1C1D20;
+  border-radius: 60px 60px 0 0;
+  width: 100%;
+  display: flex;
+  padding: 70px 5% 50px 5%;
+}
+.container_contact_left h2 {
+  font-family: 'ClashDisplay-Variable', sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  color: #fff;
+}
+.container_contact_left h2 span {
+  display: block;
+}
+.container_contact_left {
+  margin-right: 100px;
+}
+.container_contact_left button {
+  border: 1px solid #48494C;
+  width: 220px;
+  height: 50px;
+  color: #fff;
+  margin-top: 30px;
+}
+.container_contact_left button .button_filler {
+  background-color: #455CE9;
+}
+.container_contact_right {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
+form > div:not(:first-child) {
+  margin-top: 20px;
+}
+.container_contact_right .form_container {
+  display: flex;
+  flex-direction: column;
+}
+.container_double {
+  display: flex;
+  justify-content: space-between;
+}
+.container_double .form_container {
+  width: 47.5%;
+}
+.container_contact_right form :is(input, textarea) {
+  border-bottom: 2px solid #48494C;
+}
+.container_contact_right form :is(input:focus, textarea:focus) {
+  border-color: #fff;
+}
+.form_container :is(input, textarea) {
+  padding: 10px 0 5px;
+}
+.form_container :is(label, input, textarea) {
+  color: #fff;
+}
+.form_container label {
+  font-weight: 500;
+  font-size: 18px;
+}
+button.submit_message {
+    height: 130px;
+    width: 130px;
+    background-color: #455CE9;
+    color: #fff;
+    border-radius: 1000px;
+    position: relative;
+    position: absolute;
+    bottom: -115px;
+    right: 0;
+}
+button.submit_message .button_text {
+  font-weight: 500;
+  font-size: 16px;
+}
+button.submit_message .button_filler {
+  background-color: #334bd3;
+}
+/* FIN CONTACT */
 /*test*/
 
 :root {
@@ -640,7 +709,7 @@ p.js-split-letters {
   display: inline-block;
 }
 p.js-split-letters.big {
-    font-size: 7.8vw;
+    font-size: 7vw;
     font-family: 'ClashDisplay-Variable', sans-serif;
 }
 .word { display: inline-block; }
@@ -709,10 +778,9 @@ section.light:last-of-type .cta:hover {
   background-color: transparent;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: all 0.25s ease;
 }
 
 .tech-buttons button:hover {
-  background-color: #455CE9;
+  border-color: #fff;
   color: #fff;
 }
