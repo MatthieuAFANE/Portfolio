@@ -81,14 +81,6 @@
                 </button>
             </div>
         </div>
-		<div class="socials">
-            <ul>
-                <li><a id="underline" href="#">GitHub</span></a></li>
-                <li><a id="underline" href="#">Twitter</a></li>
-                <li><a id="underline" href="#">Instagram</a></li>
-                <li><a id="underline" href="#">LinkedIn</a></li>
-            </ul>
-		</div>
 		<nav class="container_menu">
 			<div class="menu__item">
 				<a class="menu__item-link">Home</a>
@@ -127,6 +119,14 @@
 				</div>
 			</div>
 		</nav>
+        <div class="socials">
+            <ul>
+                <li><a id="underline" href="#">GitHub</span></a></li>
+                <li><a id="underline" href="#">Twitter</a></li>
+                <li><a id="underline" href="#">Instagram</a></li>
+                <li><a id="underline" href="#">LinkedIn</a></li>
+            </ul>
+		</div>
 	</div>
     <main>
         <section id="home">
