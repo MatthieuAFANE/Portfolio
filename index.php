@@ -84,7 +84,7 @@
 		<nav class="container_menu">
 			<div class="menu__item">
 				<a class="menu__item-link">Home</a>
-				<img class="menu__item-img" src="menu-img-one.jpg" />
+				<img class="menu__item-img" src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg" />
 				<div class="marquee">
 					<div class="marquee__inner">
 						<span>Home - Home - Home - Home - Home - Home - Home</span>
