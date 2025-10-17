@@ -365,25 +365,53 @@
                     </div>
                 </div>
                 <div class="container_contact_right">
-                    <form action="#" methode="post">
+                    <form action="/assets/php/contactFormTraitement.php" method="post">
                         <div class="form_container">
-                            <label for="mail">Adresse mail</label>
-                            <input placeholder="Entrez votre e-mail" id="mail" type="mail" >
+                            <label for="email">Adresse mail</label>
+                            <input
+                                    placeholder="Entrez votre e-mail"
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                            >
                         </div>
+
                         <div class="container_double">
                             <div class="form_container">
                                 <label for="prenom">Prénom</label>
-                                <input placeholder="Entrez votre prénom"id="prenom" type="text">
+                                <input
+                                        placeholder="Entrez votre prénom"
+                                        id="prenom"
+                                        name="prenom"
+                                        type="text"
+                                        required
+                                >
                             </div>
                             <div class="form_container">
                                 <label for="nom">Nom</label>
-                                <input placeholder="Entrez votre nom" id="nom" name="nom" type="text">
+                                <input
+                                        placeholder="Entrez votre nom"
+                                        id="nom"
+                                        name="nom"
+                                        type="text"
+                                        required
+                                >
                             </div>
                         </div>
+
                         <div class="form_container">
                             <label for="message">Message</label>
-                            <textarea placeholder="Entrez votre message" id="message" name="message" rows="4" cols="40"></textarea>
+                            <textarea
+                                    placeholder="Entrez votre message"
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    cols="40"
+                                    required
+                            ></textarea>
                         </div>
+
                         <button id="elastic" class="submit_message" type="submit">
                             <span class="button_text">Send me</span>
                             <div class="button_filler"></div>
