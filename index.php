@@ -121,10 +121,10 @@
 		</nav>
         <div class="socials">
             <ul>
-                <li><a id="underline" href="#">GitHub</span></a></li>
+                <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</span></a></li>
                 <li><a id="underline" href="#">Twitter</a></li>
                 <li><a id="underline" href="#">Instagram</a></li>
-                <li><a id="underline" href="#">LinkedIn</a></li>
+                <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinkedIn</a></li>
             </ul>
 		</div>
 	</div>
@@ -142,14 +142,14 @@
                     <div class="social-icons">
                         <ul>
                             <li>
-                                <a title="mon github" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Github-Logo-2--Streamline-Logos" height="24" width="24">
+                                <a title="mon github" href="https://github.com/MatthieuAFANE">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Github-Logo-2--Streamline-Logos">
                                         <path d="M11.996 1.284a10.986 10.986 0 0 0 -3.472 21.412c0.548 0.095 0.722 -0.227 0.722 -0.517 0 -0.263 0.006 -0.991 0 -1.91 -3.057 0.662 -3.688 -1.448 -3.688 -1.448a2.907 2.907 0 0 0 -1.22 -1.607c-0.997 -0.682 0.075 -0.669 0.075 -0.669a2.307 2.307 0 0 1 1.683 1.131 2.34 2.34 0 0 0 3.197 0.914 2.34 2.34 0 0 1 0.697 -1.464c-2.439 -0.279 -5.004 -1.22 -5.004 -5.432a4.248 4.248 0 0 1 1.132 -2.948 3.942 3.942 0 0 1 0.107 -2.907s0.924 -0.295 3.02 1.128a10.402 10.402 0 0 1 5.503 0c2.102 -1.422 3.018 -1.128 3.018 -1.128 0.405 0.92 0.444 1.96 0.109 2.907a4.243 4.243 0 0 1 1.13 2.95c0 4.223 -2.569 5.15 -5.016 5.42a2.604 2.604 0 0 1 0.752 2.026v3.041c0 0.294 0.177 0.619 0.735 0.512a10.986 10.986 0 0 0 -3.48 -21.411Z" stroke-width="1"></path>
                                     </svg>
                                 </a>
                             </li>
                             <li>
-                                <a title="mon linkedin" href="#">
+                                <a title="mon linkedin" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
                                         <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                                     </svg>
@@ -157,7 +157,7 @@
                             </li>
                             <li>
                                 <a title="mon twitter" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Twitter-Logo-1--Streamline-Logos" height="24" width="24">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Twitter-Logo-1--Streamline-Logos">
                                         <path d="M1 19c15.617 6.062 20.038 -5.025 19.905 -10.5C22.173 8.156 23 7.292 23 6.406c-1.048 0.55 -1.595 0.394 -2.119 0 1.128 -0.768 1.071 -1.863 1.071 -2.619 -0.527 0.277 -1.503 0.96 -2.619 1.048 -0.745 -1.166 -2.619 -2.095 -5.238 -1.048 -2.619 1.048 -3.143 3.842 -2.619 5.238 -3.352 0 -7.333 -3.492 -8.905 -5.238 -1.883 2.688 0.5 5.353 1.572 6.286 -0.715 0.214 -1.572 0 -2.095 -0.524 0 2.991 2.619 4.19 3.666 4.715H3.62c0 2.095 2.444 2.968 3.667 3.142 -0.838 0.838 -4.215 1.596 -6.286 1.596Z" stroke-width="1"></path>
                                     </svg>
                                 </a>
@@ -205,7 +205,7 @@
                     <section class="dark">
                     <figure>
                         <blockquote>
-                        <p class="js-split-letters big">MON OBJECTIF ?</p>
+                        <p class="js-split-letters big">Mon Objectif ?</p>
                         </blockquote>
                         <figcaption>— Objectif</figcaption>
                     </figure>
@@ -259,10 +259,6 @@
                 <div class="container_work_header">
                     <div class="container_work_header_title">
                         <h2>Work</h2>
-                    </div>
-                    <div class="container_work_header_display">
-                        <button type="button">=</button>
-                        <button type="button">O</button>
                     </div>
                 </div>
                 <div class="container_work_content">
@@ -406,8 +402,6 @@
                                     placeholder="Entrez votre message"
                                     id="message"
                                     name="message"
-                                    rows="4"
-                                    cols="40"
                                     required
                             ></textarea>
                         </div>
@@ -445,10 +439,10 @@
                         <h4>Socials</h4>
                     </div>
                     <ul>
-                        <li><a id="underline" href="#">GitHub</a></li>
+                        <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</a></li>
                         <li><a id="underline" href="#">Twitter</a></li>
                         <li><a id="underline" href="#">Instagrame</a></li>
-                        <li><a id="underline" href="#">LinKedin</a></li>
+                        <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinKedin</a></li>
                     </ul>
                 </div>
             </div>

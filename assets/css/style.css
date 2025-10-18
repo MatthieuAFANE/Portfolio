@@ -159,6 +159,7 @@ header {
 }
 header .logo span {
   font-weight: 500;
+  font-size: clamp(0.7rem, 1.3vw, 2.6rem);
   color: #fff;
 }
 .container_nav_home nav ul {
@@ -170,6 +171,7 @@ header .logo span {
 .container_nav_home nav ul li a {
   font-weight: 500;
   color: #fff;
+  font-size: clamp(0.7rem, 1.3vw, 2.6rem);
 }
 .container_bouton_header {
   position: fixed;
@@ -421,10 +423,12 @@ section#home {
 }
 .container_home_intro .intro svg {
   transform: rotate(90deg);
+  height: clamp(1.6rem, 2.3vw, 3rem);
+  width: clamp(1.6rem, 2.3vw, 3rem);
 }
 .container_home_intro .intro h2 {
   color: #fff;
-  font-size: 30px;
+  font-size: clamp(1.6rem, 2.3vw, 3rem);
   font-weight: 500;
 }
 .container_home_intro .social-icons ul li:not(:last-child) {
@@ -432,9 +436,36 @@ section#home {
 }
 .container_home_intro .social-icons ul li a svg {
   transition: .1s;
+  height: (1.6rem, 2.3vw, 3rem);
+  width: clamp(1.6rem, 2.3vw, 3rem);
 }
 .container_home_intro .social-icons ul li a:hover svg {
   transform: scale(1.2);
+}
+@media (min-height: 1200px) {
+  .container_home_element .name_wrap h1 {
+    font-size: max(9em, 25vw);
+  }
+}
+@media (min-height: 1400px) {
+  .container_home_element .name_wrap h1 {
+    font-size: max(9em, 35vw);
+  }
+}
+@media (max-width: 900px) {
+  .container_home_intro {
+    top: auto;
+    bottom: 20px;
+    transform: translateY(0);
+  }
+  .container_home_element {
+    bottom: 160px;
+  }
+}
+@media (max-width: 600px) {
+  .container_home_image img {
+    object-fit: cover;
+  }
 }
 /* FIN HOME */
 /* WORK */
@@ -442,25 +473,10 @@ section#work {
   width: 100%;
   padding: 60px 5%;
 }
-.container_work_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .container_work_header_title h2 {
   font-family: 'ClashDisplay-Variable', sans-serif;
   font-size: clamp(4rem, 8vw, 7rem);
   font-weight: 500;
-}
-.container_work_header_display {
-  width: 110px;
-  display: flex;
-  justify-content: space-between;
-}
-.contanier_work_header_display button {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #dfdfdf;
 }
 .container_work_content {
   margin-top: 40px;
@@ -499,6 +515,7 @@ section#work {
 }
 .work_template_info_header :is(.technology, .date)  {
   font-weight: 500;
+  font-size: clamp(0.7rem, 1vw, 1.4rem);
 }
 .work_template_info_content_title {
   display: flex;
@@ -513,8 +530,13 @@ section#work {
   font-weight: 500;
 }
 .work_template_info_content_title :is(h3, svg) {
-  transform: translateX(-34px); /* c la taille du svg + margin left = 24px + 10px = 34px (A adapter responsive) */
+  transform: translateX(clamp(-1.7rem, -2vw, -3.4rem)); /* c la taille du svg + margin left = 24px + 10px = 34px (A adapter responsive) */
   transition: 0.3s ease-in-out;
+  font-size: clamp(1.7rem, 2vw, 3.4rem);
+}
+.work_template_info_content_title svg {
+  height: clamp(1.7rem, 2vw, 3.4rem);
+  width: clamp(1.7rem, 2vw, 3.4rem);
 }
 .work_template_link:hover .work_template_info_content_title :is(h3, svg) {
   transform: translateX(0);
@@ -537,7 +559,7 @@ section#contact .container_contact {
 }
 .container_contact_left h2 {
   font-family: 'ClashDisplay-Variable', sans-serif;
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 500;
   color: #fff;
 }
@@ -562,8 +584,13 @@ section#contact .container_contact {
   max-width: 600px;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
-form > div:not(:first-child) {
+.container_contact_right form {
+  width: 100%;
+}
+.container_contact_right form > div:not(:first-child) {
   margin-top: 20px;
 }
 .container_contact_right .form_container {
@@ -615,7 +642,7 @@ button.submit_message .button_filler {
 @media (max-width: 950px) {
   section#contact .container_contact {
     flex-direction: column;
-    padding: 70px 5% 100px 5%;
+    padding: 70px 10% 100px 10%;
   }
   .container_contact_left {
     margin-right: 0;
@@ -630,6 +657,19 @@ button.submit_message .button_filler {
   }
   button.submit_message {
     bottom: -165px;
+  }
+}
+@media (max-width: 500px) {
+  section#contact .container_contact {
+    padding: 50px 10% 100px 10%;
+  }
+}
+@media (max-width: 360px) {
+  .container_contact_left h2 {
+    flex-direction: column;
+  }
+  .container_contact_left h2 span:nth-child(2) {
+    margin: 0;
   }
 }
 /* FIN CONTACT */
@@ -652,7 +692,7 @@ button.submit_message .button_filler {
   height: 100%;
 }
 .container_footer_header .text {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .container_footer_header .text h2 {
   font-family: 'ClashDisplay-Variable', sans-serif;
@@ -697,6 +737,11 @@ button.submit_message .button_filler {
 .container_footer_edition_socials .socials ul li:not(:last-child) {
   margin-right: 10px;
 }
+@media (max-width: 600px) {
+  .container_footer {
+    padding: 70px 5%;
+  }
+}
 /* FIN FOOTER */
 
 /*test*/
@@ -729,16 +774,13 @@ section#about section {
   background-color: #fff;
   color: var(--text-dim-light);
 }
-
-figure {
-  max-width: 900px;
+section#about figure {
+  max-width: 1000px;
   width: 100%;
-  padding: 2rem;
   text-align: center;
 }
-
 p.js-split-letters {
-  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  font-size: clamp(1.5rem, 5vw, 4.6rem);
   line-height: 1.1;
   font-weight: 600;
   margin: 0;
@@ -747,14 +789,27 @@ p.js-split-letters {
   display: inline-block;
 }
 p.js-split-letters.big {
-    font-size: 7vw;
+    font-size: clamp(2.3rem, 8.5vw, 7rem);
     font-family: 'ClashDisplay-Variable', sans-serif;
 }
-.word { display: inline-block; }
-.char { display: inline-block; will-change: color; transition: color 0.3s ease; }
-.space { display: inline-block; width: 0.35em; }
+.word {
+  display: inline-block;
+}
+.char {
+  display: inline-block;
+  will-change: color;
+  transition: color 0.3s ease;
+}
+.space {
+  display: inline-block;
+  width: 0.35em;
+}
 
-figcaption { font-size: 1rem; opacity: 0.6; margin-top: 1rem; }
+figcaption {
+  font-size: clamp(0.7rem, 2vw, 2.1rem);
+  opacity: 0.6;
+  margin-top: 1.2rem;
+}
 
 .cta {
   display: inline-block;
@@ -793,11 +848,7 @@ section.light:last-of-type .cta:hover {
 }
 
 .tech-tools blockquote p {
-  font-size: clamp(1.8rem, 5.9vw, 5.9vw);
-  font-weight: 600;
   margin-bottom: 2rem;
-  text-align: center;
-  color: #ffffff;
 }
 
 .tech-buttons {
@@ -814,7 +865,7 @@ section.light:last-of-type .cta:hover {
   color: #fff;
   border: 1px solid #48494C;
   background-color: transparent;
-  font-size: 0.95rem;
+  font-size: clamp(0.7rem, 2vw, 1.4rem);
   font-weight: 600;
 }
 
