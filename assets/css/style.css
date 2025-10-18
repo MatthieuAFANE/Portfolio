@@ -552,7 +552,6 @@ section#work {
 /* CONTACT */
 section#contact .container_contact {
   background-color: #1C1D20;
-  border-radius: 60px 60px 0 0;
   width: 100%;
   display: flex;
   padding: 70px 5% 50px 5%;
@@ -642,7 +641,6 @@ button.submit_message .button_filler {
 @media (max-width: 950px) {
   section#contact .container_contact {
     flex-direction: column;
-    padding: 70px 10% 100px 10%;
   }
   .container_contact_left {
     margin-right: 0;
@@ -661,7 +659,7 @@ button.submit_message .button_filler {
 }
 @media (max-width: 500px) {
   section#contact .container_contact {
-    padding: 50px 10% 100px 10%;
+    padding: 50px 5% 100px 5%;
   }
 }
 @media (max-width: 360px) {
@@ -849,6 +847,7 @@ section.light:last-of-type .cta:hover {
 
 .tech-tools blockquote p {
   margin-bottom: 2rem;
+  font-size: clamp(2rem, 5vw, 4.6rem);
 }
 
 .tech-buttons {
