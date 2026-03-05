@@ -1,5 +1,33 @@
 console.log("bonjour");
+
+
 document.addEventListener("DOMContentLoaded", () => {
+// smooth scroll lenis
+
+      const lenis = new Lenis({
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    // Synchroniser Lenis avec ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    // --- GSAP Animations ---
+    gsap.registerPlugin(ScrollTrigger);
+
   // --- Boutons ---
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
@@ -14,21 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- Navigation ---
-  const menuBtn = document.querySelector(".menu");
-  const closeBtn = document.querySelector(".close");
-  const containerNav = document.querySelector(".container_nav");
-
-  // if (menuBtn && closeBtn && containerNav) {
-  //   menuBtn.addEventListener("click", () => {
-  //     containerNav.classList.add("active");
-  //     openNav();
-  //   });
-  //   closeBtn.addEventListener("click", () => {
-  //     containerNav.classList.remove("active");
-  //     closeNav();
-  //   });
-  // }
-  // affiche bouton menu lorsqu'il depasse section#home
+const menuBtn = document.querySelector(".menu");
+const closeBtn = document.querySelector(".close");
+const containerNav = document.querySelector(".container_nav");
 const homeSection = document.getElementById('home');
 const menu = document.querySelector('.container_bouton_header');
 
@@ -38,29 +54,29 @@ window.addEventListener('scroll', () => {
 
   if (scrollY >= homeBottom) {
     // Affiche le bouton avec effet scale
-     menu.style.transform = 'scale(1)';
-      menu.style.opacity = '1';
-      menu.style.pointerEvents = 'auto';
+    menu.style.transform = 'scale(1)';
+    menu.style.opacity = '1';
+    menu.style.pointerEvents = 'auto';
   } else {
     // Cache et désactive le bouton
-     menu.style.transform = 'scale(0)';
-      menu.style.opacity = '0';
-      menu.style.pointerEvents = 'none';
+    menu.style.transform = 'scale(0)';
+    menu.style.opacity = '0';
+    menu.style.pointerEvents = 'none';
   }
 });
 // animation suivie cursor button rond
 const elasticButtons = document.querySelectorAll('#elastic');
 
-  menuBtn.addEventListener("click", () => {
+//   menuBtn.addEventListener("click", () => {
 
-  // Après l'ouverture, recalcule la position du bouton .close
-  setTimeout(() => {
-    const closeBtnElastic = document.querySelector('.close#elastic');
-    if (closeBtnElastic) {
-      rect = closeBtnElastic.getBoundingClientRect();
-    }
-  }, 400); // attends un peu que la nav soit animée
-});
+//   // Après l'ouverture, recalcule la position du bouton .close
+//   setTimeout(() => {
+//     const closeBtnElastic = document.querySelector('.close#elastic');
+//     if (closeBtnElastic) {
+//       rect = closeBtnElastic.getBoundingClientRect();
+//     }
+//   }, 400); // attends un peu que la nav soit animée
+// });
 
 elasticButtons.forEach((btn) => {
   let rect = null;
@@ -190,8 +206,8 @@ window.addEventListener('resize', () => {
 });
 
 // ANIMATION APPARITION NAV HAMBURGER
-  // --- Timeline principale ---
-  const t1 = new TimelineMax({ paused: true });
+// --- Timeline principale ---
+const t1 = new TimelineMax({ paused: true });
 
 // Animation d'ouverture du menu
 t1.to(".container_nav", {
@@ -210,7 +226,7 @@ t1.from(".container_menu > div", {
 }, "-=0.4"); // commence 0.4s avant la fin de l’animation précédente
 
 
-  // Animation des icônes sociales
+// Animation des icônes sociales
 t1.from(".container_nav .socials li a", {
   y: 40,
   x: -20,
@@ -243,6 +259,17 @@ t1.from(".container_nav .socials li a", {
     t1.timeScale(2);      // deux fois plus rapide
     t1.reversed(true);    // rejoue la timeline à l’envers
   });
+  // fermeture de la nav avec les lien de celle si
+
+    const linksNav = document.querySelectorAll(".menu__item-link")
+
+  linksNav.forEach((linkNav) => {
+    linkNav.addEventListener("click", () => {
+      t1.timeScale(2);      // deux fois plus rapide
+      t1.reversed(true);    // rejoue la timeline à l’envers
+    })
+  })
+
 
 
   // test
@@ -331,3 +358,78 @@ t1.from(".container_nav .socials li a", {
     });
   });
 });
+
+
+
+
+
+
+// // competence et tools animation
+// document.addEventListener("DOMContentLoaded", () => {
+//     // --- Smooth Scroll (Lenis) ---
+//     const lenis = new Lenis({
+//         duration: 1.2,
+//         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//         direction: 'vertical',
+//         gestureDirection: 'vertical',
+//         smooth: true,
+//         mouseMultiplier: 1,
+//         smoothTouch: false,
+//         touchMultiplier: 2,
+//         infinite: false,
+//     });
+
+//     function raf(time) {
+//         lenis.raf(time);
+//         requestAnimationFrame(raf);
+//     }
+//     requestAnimationFrame(raf);
+
+//     // --- GSAP Animations ---
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     // 1. Magnetic Buttons
+//     const magneticButtons = document.querySelectorAll('.magnetic-button');
+//     magneticButtons.forEach(btn => {
+//         btn.addEventListener('mousemove', (e) => {
+//             const rect = btn.getBoundingClientRect();
+//             const x = e.clientX - rect.left - rect.width / 2;
+//             const y = e.clientY - rect.top - rect.height / 2;
+
+//             gsap.to(btn, {
+//                 x: x * 0.4,
+//                 y: y * 0.4,
+//                 duration: 0.4,
+//                 ease: "power3.out"
+//             });
+//         });
+
+//         btn.addEventListener('mouseleave', () => {
+//             gsap.to(btn, {
+//                 x: 0,
+//                 y: 0,
+//                 duration: 1,
+//                 ease: "elastic.out(1, 0.3)"
+//             });
+//         });
+//     });
+
+//     // 2. Skills Reveal
+//     gsap.from('.skills-card', {
+//         opacity: 0,
+//         y: 50,
+//         duration: 1.2,
+//         ease: "power4.out",
+//         delay: 0.5
+//     });
+
+//     gsap.from('.skill-item', {
+//         opacity: 0,
+//         scale: 0.8,
+//         y: 20,
+//         duration: 0.8,
+//         stagger: 0.05,
+//         ease: "power3.out",
+//         delay: 0.8
+//     });
+// });

@@ -1,13 +1,15 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matthieu Afane</title>
+    <link rel="icon" type="image/png" href="http://localhost/portfolio/assets/img/matthieuAfane.png">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+      
+    </style>
 </head>
 <body>
     <header>
@@ -18,10 +20,10 @@
         <div class="container_nav_home">
                 <nav>
                     <ul>
-                        <li><a id="underline" href="#">Home</a></li>
-                        <li><a id="underline" href="#">Work</a></li>
-                        <li><a id="underline" href="#">About</a></li>
-                        <li><a id="underline" href="#">Contact</a></li>
+                        <li><a id="underline" href="#home">Home</a></li>
+                        <li><a id="underline" href="#about">About</a></li>
+                        <li><a id="underline" href="#work">Work</a></li>
+                        <li><a id="underline" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -83,8 +85,10 @@
         </div>
 		<nav class="container_menu">
 			<div class="menu__item">
-				<a class="menu__item-link">Home</a>
-				<img class="menu__item-img" src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg" />
+				<a href="#home" class="menu__item-link">Home</a>
+                <svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
+                </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
 						<span>Home - Home - Home - Home - Home - Home - Home</span>
@@ -92,8 +96,21 @@
 				</div>
 			</div>
 			<div class="menu__item">
-				<a class="menu__item-link">Work</a>
-				<img class="menu__item-img" src="menu-img-two.jpg" />
+				<a href="#about" class="menu__item-link">About</a>
+				<svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
+                </svg>
+				<div class="marquee">
+					<div class="marquee__inner">
+                        <span>About - About - About - About - About - About - About</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a href="#work" class="menu__item-link">Work</a>
+				<svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
+                </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
 						<span>Work - Work - Work - Work - Work - Work - Work</span>
@@ -101,17 +118,10 @@
 				</div>
 			</div>
 			<div class="menu__item">
-				<a class="menu__item-link">About</a>
-				<img class="menu__item-img" src="menu-img-three.jpg" />
-				<div class="marquee">
-					<div class="marquee__inner">
-						<span>About - About - About - About - About - About - About</span>
-					</div>
-				</div>
-			</div>
-			<div class="menu__item">
-				<a class="menu__item-link">Contact</a>
-				<img class="menu__item-img" src="menu-img-four.jpg" />
+				<a href="#contact" class="menu__item-link">Contact</a>
+				<svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
+                </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
 						<span>Contact - Contact - Contact - Contact - Contact - Contact - Contact</span>
@@ -122,8 +132,6 @@
         <div class="socials">
             <ul>
                 <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</span></a></li>
-                <li><a id="underline" href="#">Twitter</a></li>
-                <li><a id="underline" href="#">Instagram</a></li>
                 <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinkedIn</a></li>
             </ul>
 		</div>
@@ -136,7 +144,9 @@
                 </div>
                 <div class="container_home_intro">
                     <div class="intro">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                            <path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/>
+                        </svg>
                         <h2>Web developer</h2>
                     </div>
                     <div class="social-icons">
@@ -155,17 +165,10 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a title="mon twitter" href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Twitter-Logo-1--Streamline-Logos">
                                         <path d="M1 19c15.617 6.062 20.038 -5.025 19.905 -10.5C22.173 8.156 23 7.292 23 6.406c-1.048 0.55 -1.595 0.394 -2.119 0 1.128 -0.768 1.071 -1.863 1.071 -2.619 -0.527 0.277 -1.503 0.96 -2.619 1.048 -0.745 -1.166 -2.619 -2.095 -5.238 -1.048 -2.619 1.048 -3.143 3.842 -2.619 5.238 -3.352 0 -7.333 -3.492 -8.905 -5.238 -1.883 2.688 0.5 5.353 1.572 6.286 -0.715 0.214 -1.572 0 -2.095 -0.524 0 2.991 2.619 4.19 3.666 4.715H3.62c0 2.095 2.444 2.968 3.667 3.142 -0.838 0.838 -4.215 1.596 -6.286 1.596Z" stroke-width="1"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a title="mon e-mail" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Google-Mail-Logo--Streamline-Logos" height="24" width="24">
-                                    <path fill-rule="evenodd" d="M1 6.5A2.5 2.5 0 0 1 3.5 4h0.782a2.5 2.5 0 0 1 1.442 0.458l1.276 0.9v7.514L1 8.437V6.5Zm0 3.802V20h6v-5.263l-6 -4.435Zm16 4.435V20h6v-9.698l-6 4.435Zm6 -6.3V6.5A2.5 2.5 0 0 0 20.5 4h-0.782a2.5 2.5 0 0 0 -1.442 0.458l-1.276 0.9v7.514l6 -4.435Zm-7.5 -2.02L12 8.888l-3.5 -2.47v7.562l3.5 2.587 3.5 -2.587V6.417Z" clip-rule="evenodd" stroke-width="1"></path>
                                     </svg>
                                 </a>
                             </li> -->
@@ -198,7 +201,6 @@
                         <blockquote>
                         <p class="js-split-letters">Actuellement étudiant en informatique à l'IUT de Reims-Châlons-Charleville, je transforme le code en projets concrets.</p>
                         </blockquote>
-                        <figcaption>— Moi</figcaption>
                     </figure>
                     </section>
 
@@ -207,7 +209,6 @@
                         <blockquote>
                         <p class="js-split-letters big">Mon Objectif ?</p>
                         </blockquote>
-                        <figcaption>— Objectif</figcaption>
                     </figure>
                     </section>
 
@@ -216,7 +217,6 @@
                         <blockquote>
                         <p class="js-split-letters">Transformer vos idées en expériences visuelles mémorables.</p>
                         </blockquote>
-                        <figcaption>— Vision</figcaption>
                     </figure>
                     </section>
 
@@ -229,7 +229,7 @@
                     </figure>
                     </section> -->
 
-                    <section class="dark tech-tools">
+                    <!-- <section class="dark tech-tools">
                         <blockquote>
                             <p class="js-split-letters">Technologies & Tools</p>
                         </blockquote>
@@ -247,8 +247,68 @@
                             <button>SQL</button>
                             <button>phpMyAdmin</button>
                         </div>
-                    </section>
+                    </section> -->
 
+                    <section id="skills-only">
+                    <div class="container_skills">
+                        <div class="skills-card dark">
+                            <div class="skills-header">
+                                <h3>Technologies & Tools</h3>
+                                <p>Mon arsenal technique pour vos projets.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML5">
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" alt="CSS3">
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript">
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/php.svg" alt="PHP">
+                                    <span>PHP</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" alt="C#">
+                                    <span>C#</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python">
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/symfony.svg" alt="Symfony">
+                                    <span>Symfony</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/greensock.svg" alt="GSAP">
+                                    <span>GSAP</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="SQL">
+                                    <span>SQL</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/figma.svg" alt="Figma">
+                                    <span>Figma</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+                                    <span>GitHub</span>
+                                </div>
+                                <div class="skill-item magnetic-button">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/phpmyadmin.svg" alt="phpMyAdmin">
+                                    <span>phpMyAdmin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 </div>
 
@@ -265,23 +325,44 @@
                     <figure class="work_template">
                         <a href="#" class="work_template_link">
                             <div class="work_template_image_more">
-                                <img src="https://assets.awwwards.com/awards/submissions/2025/08/68af13d98621f852628699.jpg" alt="">
+                                <img src="assets/img/portfolio_MA.jpg" alt="portfolio Matthieu Afane">
                             </div>
                             
                             <div class="work_template_info">
                                 <div class="work_template_info_header">
                                     <h4 class="technology">HTML • CSS • JS • PHP</h4>
-                                    <h4 class="date">2024</h4>
+                                    <h4 class="date">2025</h4>
                                 </div>
                                 <div class="work_template_info_content">
                                     <div class="work_template_info_content_title">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                                        <h3>TWICE</h3>
+                                        <h3>MATTHIEU AFANE</h3>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </figure>
+                    <figure class="work_template">
+                        <a href="http://aroma.free.nf/index.php?step=1" class="work_template_link">
+                            <div class="work_template_image_more">
+                                <img src="assets/img/aroma.jpg" alt="e-commerce Aroma">
+                            </div>
+                            
+                            <div class="work_template_info">
+                                <div class="work_template_info_header">
+                                    <h4 class="technology">HTML • CSS • JS • PHP • BD</h4>
+                                    <h4 class="date">2025</h4>
+                                </div>
+                                <div class="work_template_info_content">
+                                    <div class="work_template_info_content_title">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                                        <h3>AROMA</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <!-- 
                     <figure class="work_template">
                         <a href="#" class="work_template_link">
                             <div class="work_template_image_more">
@@ -305,26 +386,6 @@
                     <figure class="work_template">
                         <a href="#" class="work_template_link">
                             <div class="work_template_image_more">
-                                <img src="https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/688443b774d62163098050.jpg" alt="">
-                            </div>
-                            
-                            <div class="work_template_info">
-                                <div class="work_template_info_header">
-                                    <h4 class="technology">HTML • CSS • JS • PHP</h4>
-                                    <h4 class="date">2024</h4>
-                                </div>
-                                <div class="work_template_info_content">
-                                    <div class="work_template_info_content_title">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                                        <h3>HONDA</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </figure>
-                    <figure class="work_template">
-                        <a href="#" class="work_template_link">
-                            <div class="work_template_image_more">
                                 <img src="https://assets.awwwards.com/awards/submissions/2025/08/68af13d98621f852628699.jpg" alt="">
                             </div>
                             
@@ -341,7 +402,7 @@
                                 </div>
                             </div>
                         </a>
-                    </figure>
+                    </figure> -->
                 </div>
             </div>
         </section>
@@ -440,8 +501,6 @@
                     </div>
                     <ul>
                         <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</a></li>
-                        <li><a id="underline" href="#">Twitter</a></li>
-                        <li><a id="underline" href="#">Instagrame</a></li>
                         <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinKedin</a></li>
                     </ul>
                 </div>
@@ -454,6 +513,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- JS source code -->
     <script src="assets/js/script.js"></script>
+    
+    <!-- JS SMOOTH SCROLLING -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 
 </body>
 </html>

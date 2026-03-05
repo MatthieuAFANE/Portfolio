@@ -241,7 +241,7 @@ button.menu .button_text {
 	letter-spacing: 0;
   font-weight: 500;
   color: #1c1d20;
-  font-size: clamp(0.7rem, 2vw, 1.6rem);
+  font-size: clamp(0.7rem, 1.2vw, 1.6rem);
 }
 
 .container_nav .socials ul li a#underline::after {
@@ -258,7 +258,7 @@ button.menu .button_text {
 	width: 100%;
 	height: 100vh;
 	background: #fff;
-  padding: 25px 4% 25px 5%;
+  padding: 25px 4% 15px 5%;
   z-index: 1000;
 }
 
@@ -294,21 +294,20 @@ button.menu .button_text {
 	opacity: 0;
 }
 
-.menu__item-img {
-	z-index: 2;
+.menu__item-svg {
 	pointer-events: none;
 	position: absolute;
-	height: 12vh;
-	max-height: 600px;
+	height: clamp(calc(4rem / 2), calc(6vw / 2), calc(5.5rem / 2));
+  width: clamp(calc(4rem / 2), calc(6vw / 2), calc(5.5rem / 2));
 	opacity: 0;
-	left: 8%;
-	top: 10%;
-	transform: scale(0);
+	left: 0%;
+	top: 50%;
+	transform: scale(0) translateY(-50%);
 }
 
-.menu__item-link:hover + .menu__item-img {
+.menu__item-link:hover + .menu__item-svg {
 	opacity: 1;
-	transform: scale(1);
+	transform: scale(1) translateY(-50%);
 	transition: all 0.4s;
 }
 
@@ -337,12 +336,12 @@ button.menu .button_text {
 	position: relative;
 	opacity: 0;
 	transition: all 0.1s;
-	transform: translateX(60px);
+	transform: translateX(calc(clamp(calc(4rem / 2), calc(6vw / 2), calc(5.5rem / 2)) + 60px));
 }
 
 .menu__item-link:hover ~ .marquee .marquee__inner {
 	opacity: 1;
-	transform: translateX(0px);
+	transform: translateX(calc(clamp(calc(4rem / 2), calc(6vw / 2), calc(5.5rem / 2)) + clamp(calc(4rem / 4), calc(6vw / 4), calc(5.5rem / 4))));
 	transition-duration: 0.4s;
 }
 
@@ -495,7 +494,7 @@ section#work {
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
 }
 .work_template_image_more img {
   width: 100%;
@@ -530,7 +529,7 @@ section#work {
   font-weight: 500;
 }
 .work_template_info_content_title :is(h3, svg) {
-  transform: translateX(clamp(-1.7rem, -2vw, -3.4rem)); /* c la taille du svg + margin left = 24px + 10px = 34px (A adapter responsive) */
+  transform: translateX(calc(clamp(-1.7rem, -2vw, -3.4rem) - 10px)); /* c la taille du svg + margin left = 24px + 10px = 34px (A adapter responsive) */
   transition: 0.3s ease-in-out;
   font-size: clamp(1.7rem, 2vw, 3.4rem);
 }
@@ -641,6 +640,7 @@ button.submit_message .button_filler {
 @media (max-width: 950px) {
   section#contact .container_contact {
     flex-direction: column;
+    padding: 50px 5% 100px 5%;
   }
   .container_contact_left {
     margin-right: 0;
@@ -657,11 +657,6 @@ button.submit_message .button_filler {
     bottom: -165px;
   }
 }
-@media (max-width: 500px) {
-  section#contact .container_contact {
-    padding: 50px 5% 100px 5%;
-  }
-}
 @media (max-width: 360px) {
   .container_contact_left h2 {
     flex-direction: column;
@@ -674,16 +669,16 @@ button.submit_message .button_filler {
 /* FOOTER */
 .container_footer {
   background-color: #1C1D20;
-  padding: 50px 5%;
-    border-top: 1px solid #48494C;
+  padding: 85px 5%;
+  border-top: 1px solid #48494C;
 }
 .container_footer_header {
   display: flex;
   align-items: center;
 }
 .container_footer_header .image {
-  width: clamp(2rem, 4vw, 5rem);
-  height: clamp(2rem, 4vw, 5rem);
+  width: clamp(1.8rem, 4vw, 5rem);
+  height: clamp(1.8rem, 4vw, 5rem);
 }
 .container_footer_header .image img {
   width: 100%;
@@ -694,7 +689,7 @@ button.submit_message .button_filler {
 }
 .container_footer_header .text h2 {
   font-family: 'ClashDisplay-Variable', sans-serif;
-  font-size: clamp(2rem, 6vw, 5rem); /* Ajout de la font varriable text */
+  font-size: clamp(1.8rem, 6vw, 5rem); /* Ajout de la font varriable text */
   font-weight: 500;
   color: #fff;
 }
@@ -702,6 +697,9 @@ button.submit_message .button_filler {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.container_footer_edition_socials .edition {
+  margin-right: 20px;
 }
 .container_footer_edition_socials :is(.edition, .socials) {
   margin-top: 40px;
@@ -735,12 +733,91 @@ button.submit_message .button_filler {
 .container_footer_edition_socials .socials ul li:not(:last-child) {
   margin-right: 10px;
 }
-@media (max-width: 600px) {
-  .container_footer {
-    padding: 70px 5%;
-  }
-}
 /* FIN FOOTER */
+
+  /* SKILLS SECTION */
+#skills-only {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5%;
+    background-color: #1C1D20;
+    position: relative;
+}
+.container_skills {
+    max-width: 1100px;
+    width: 100%;
+}
+.skills-header {
+    margin-bottom: 4rem;
+    text-align: left;
+}
+.skills-header h3 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: 'Clash Display', sans-serif;
+}
+.skills-header p {
+    opacity: 0.4;
+    font-size: 1.1rem;
+    color: #fff;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+.skill-item img {
+    width: 45px;
+    height: 45px;
+    filter: invert(1);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.skill-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.skill-item:hover span {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    .container_contact { grid-template-columns: 1fr; gap: 50px; }
+}
+@media (max-width: 768px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+    .skills-grid { grid-template-columns: 1fr; }
+}
 
 /*test*/
 
@@ -809,66 +886,20 @@ figcaption {
   margin-top: 1.2rem;
 }
 
-.cta {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
-  background: linear-gradient(135deg,#ffd166,#ff6b6b);
-  color: #111;
-  font-weight: 700;
-  text-decoration: none;
-  transform: translateY(15px);
-  opacity: 0;
+
+/* smooth scrolling */
+html.lenis {
+  height: auto;
 }
 
-/* Bouton spécifique pour la section CV */
-section.light:last-of-type .cta {
-  background: linear-gradient(135deg, #6a5af9, #43e97b);
-  color: #fff;
-  font-size: 1.1rem;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transform: translateY(20px);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
 
-section.light:last-of-type .cta:hover {
-  transform: translateY(0) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-  background: linear-gradient(135deg, #7b61ff, #4af488);
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
-.tech-tools {
-  padding: 0 2rem;
-  flex-direction: column;
-}
-
-.tech-tools blockquote p {
-  margin-bottom: 2rem;
-  font-size: clamp(2rem, 5vw, 4.6rem);
-}
-
-.tech-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  max-width: 550px;
-  justify-content: center;
-}
-
-.tech-buttons button {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  color: #fff;
-  border: 1px solid #48494C;
-  background-color: transparent;
-  font-size: clamp(0.7rem, 2vw, 1.4rem);
-  font-weight: 600;
-}
-
-.tech-buttons button:hover {
-  border-color: #fff;
-  color: #fff;
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
