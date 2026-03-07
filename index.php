@@ -492,7 +492,8 @@
                         <h4>Edition</h4>
                     </div>
                     <div class="info">
-                        <span>© 2025 matthieuafane.free.nf</span>
+                        <span>© 2025 matthieuafane.free.nf</span>
+                        <a id="underline" href="#" class="btn-mentions">Mentions Légales</a>
                     </div>
                 </div>
                 <div class="socials">
@@ -507,6 +508,53 @@
             </div>
         </div>
     </footer>
+
+    <!-- POPUP MENTIONS LÉGALES (Design Split-Screen Awwwards) -->
+<div class="legal-overlay-new">
+    <div class="legal-container">
+        
+        <!-- Moitié Gauche (Bleue) : Titre fixe -->
+        <div class="legal-left">
+            <div class="legal-title-wrapper">
+                <h2>Mentions<br>Légales</h2>
+                <span class="legal-date">Mise à jour : 2026</span>
+            </div>
+        </div>
+
+        <!-- Moitié Droite (Sombre) : Contenu avec Scroll Natif -->
+        <div class="legal-right">
+            <!-- Bouton de fermeture élastique -->
+            <button id="elastic" class="close-legal-btn" type="button">
+                <span class="button_text">Close</span>
+                <div class="button_filler"></div>
+            </button>
+
+            <!-- ZONE DE SCROLL NATIF (data-lenis-prevent bloque le JS d'arrière-plan) -->
+            <div class="legal-scroll-content" data-lenis-prevent>
+                <div class="legal-block">
+                    <h3>01. L'Architecte de la Matrice</h3>
+                    <p>Ce portfolio intergalactique est sculpté avec amour, de la sueur, et une quantité déraisonnable de caféine par <strong>Matthieu Afane</strong>, dompteur de pixels et développeur web.</p>
+                </div>
+                
+                <div class="legal-block">
+                    <h3>02. Hébergement Quantique</h3>
+                    <p>Ce site repose sur l'hébergement de <strong>Free.nf</strong>. Nos serveurs fonctionnent exclusivement à l'énergie propre, générée par des hamsters virtuels surentraînés courant dans des roues en fibre de carbone.</p>
+                </div>
+                
+                <div class="legal-block">
+                    <h3>03. Traitement des Données (RGPD)</h3>
+                    <p><strong>Zéro tracking. Zéro espionnage.</strong> Je ne récolte absolument aucune donnée personnelle dans votre dos. Les seuls "cookies" acceptés sur ce site sont ceux aux pépites de chocolat. Naviguez en paix !</p>
+                </div>
+                
+                <div class="legal-block">
+                    <h3>04. Propriété Intellectuelle</h3>
+                    <p>Vous avez le droit d'inspecter le code source (c'est fait pour). En revanche, le plagiat intégral de ce design déclenchera une ancienne malédiction git : tous vos futurs <em>commits</em> se solderont par des conflits impossibles à résoudre. Vous êtes prévenu.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

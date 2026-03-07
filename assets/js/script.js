@@ -124,6 +124,53 @@ elasticButtons.forEach((btn) => {
   });
 
 
+  // --- ANIMATION POPUP MENTIONS LÉGALES (GSAP) ---
+  const modalTl = gsap.timeline({ paused: true });
+
+  // 1. Apparition du panneau (clip-path)
+  modalTl.to(".legal-overlay-new", {
+      clipPath: "inset(0% 0% 0% 0%)",
+      pointerEvents: "auto",
+      duration: 1,
+      ease: "power4.inOut"
+  })
+  // 2. Le titre glisse depuis le bas (à gauche)
+  .from(".legal-title-wrapper h2, .legal-date", {
+      y: 50,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 0.8,
+      ease: "power3.out"
+  }, "-=0.4")
+  // 3. Le texte de droite arrive en cascade
+  .to(".legal-block", {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 0.8,
+      ease: "power3.out"
+  }, "-=0.6");
+
+  const btnOpenLegal = document.querySelector(".btn-mentions");
+  const btnCloseLegal = document.querySelector(".close-legal-btn");
+
+  if (btnOpenLegal && btnCloseLegal) {
+      // Ouverture de la popup
+      btnOpenLegal.addEventListener("click", (e) => {
+          e.preventDefault();
+          lenis.stop(); // Stoppe le smooth scroll du site (Lenis) en arrière-plan
+          modalTl.timeScale(1).play();
+      });
+
+      // Fermeture de la popup
+      btnCloseLegal.addEventListener("click", () => {
+          // Joue l'animation à l'envers (x1.5 plus rapide)
+          modalTl.timeScale(1.5).reverse().eventCallback("onReverseComplete", () => {
+              lenis.start(); // Réactive le smooth scroll du site une fois fermé
+          });
+      });
+  }
+  
 
 });
 
@@ -212,7 +259,7 @@ const t1 = new TimelineMax({ paused: true });
 // Animation d'ouverture du menu
 t1.to(".container_nav", {
   duration: 1,
-  left: 0,
+  x: "0%",
   ease: "expo.inOut"
 });
 
@@ -433,3 +480,5 @@ t1.from(".container_nav .socials li a", {
 //         delay: 0.8
 //     });
 // });
+
+

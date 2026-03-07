@@ -254,7 +254,8 @@ button.menu .button_text {
 
 .container_nav {
 	position: fixed;
-	left: -100%;
+  left: 0;
+  transform: translateX(-100%);
 	width: 100%;
 	height: 100vh;
 	background: #fff;
@@ -701,6 +702,12 @@ button.submit_message .button_filler {
 .container_footer_edition_socials .edition {
   margin-right: 20px;
 }
+
+.container_footer_edition_socials .info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .container_footer_edition_socials :is(.edition, .socials) {
   margin-top: 40px;
 }
@@ -713,6 +720,7 @@ button.submit_message .button_filler {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
+  margin-right: 10px;
 }
 .container_footer_edition_socials .socials .title h4 {
   color: #8B8C8D;
@@ -780,7 +788,6 @@ button.submit_message .button_filler {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.02);
     transition: background 0.3s ease, border-color 0.3s ease;
-    cursor: pointer;
     text-align: center;
 }
 .skill-item img {
@@ -902,4 +909,171 @@ html.lenis {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+
+/* pop up mention legale */
+
+/* ==========================================================================
+   POPUP MENTIONS LÉGALES (Split-Screen & Scroll Natif)
+   ========================================================================== */
+
+.legal-overlay-new {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+    display: flex;
+    pointer-events: none; /* Inactif par défaut */
+    clip-path: inset(100% 0 0 0); /* Caché en bas comme un rideau */
+}
+
+.legal-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Colonne Gauche : Titre Fixe */
+.legal-left {
+    width: 40%;
+    height: 100%;
+    background-color: #455CE9;
+    color: #fff;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.legal-title-wrapper h2 {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: clamp(3.5rem, 6vw, 7rem);
+    line-height: 1.1;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.btn-mentions {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.btn-mentions#underline::after {
+  height: 1px;
+}
+.legal-date {
+    font-family: 'GeneralSans-Variable', sans-serif;
+    font-size: 1rem;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Colonne Droite : Contenu */
+.legal-right {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    background: #1C1D20;
+}
+
+/* Bouton Fermer */
+.close-legal-btn {
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    z-index: 10;
+    height: 80px;
+    width: 80px;
+    background-color: #111214; 
+    border: 1px solid #48494C;
+    color: #fff;
+    border-radius: 1000px;
+    overflow: hidden;
+}
+
+.close-legal-btn .button_filler {
+    background-color: #fff;
+}
+
+.close-legal-btn:hover .button_text {
+    color: #111214; 
+}
+
+/* Zone de scroll natif isolée */
+.legal-scroll-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 140px 10% 80px 10%;
+    -webkit-overflow-scrolling: touch; /* Scroll fluide iOS */
+    overscroll-behavior: contain; /* Empêche de scroller le body derrière */
+}
+
+/* Scrollbar CSS discrète */
+.legal-scroll-content::-webkit-scrollbar {
+    width: 6px;
+}
+.legal-scroll-content::-webkit-scrollbar-track {
+    background: #111214;
+}
+.legal-scroll-content::-webkit-scrollbar-thumb {
+    background: #48494C;
+    border-radius: 10px;
+}
+
+/* Blocs de texte */
+.legal-block {
+    margin-bottom: 60px;
+    opacity: 0; /* Caché pour l'animation GSAP */
+    transform: translateY(40px);
+}
+
+.legal-block h3 {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #455CE9;
+}
+
+.legal-block p {
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    max-width: 800px;
+}
+
+/* --- RESPONSIVE POPUP --- */
+@media (max-width: 900px) {
+    .legal-container {
+        flex-direction: column;
+    }
+    .legal-left {
+        width: 100%;
+        height: 35vh;
+        padding: 30px 5%;
+        justify-content: flex-end;
+    }
+    .legal-title-wrapper h2 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+    .legal-right {
+        width: 100%;
+        height: 65vh;
+    }
+    .legal-scroll-content {
+        padding: 60px 5% 80px 5%;
+    }
+    .close-legal-btn {
+        top: -40px;
+        right: 5%;
+        height: 60px;
+        width: 60px;
+        background-color: #1C1D20;
+    }
 }
