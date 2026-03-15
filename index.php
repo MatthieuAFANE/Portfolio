@@ -25,8 +25,8 @@
                         <li><a id="underline" href="#work" data-fr="Projets" data-en="Work">Projets</a></li>
                         <li><a id="underline" href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
 
-                        <li style="margin-left: 30px;">
-                            <a id="lang-switch" href="javascript:void(0)" style="font-weight: 700; color: #455CE9;">
+                        <li>
+                            <a id="lang-switch" href="javascript:void(0)" style="font-weight: 700; padding: 7.5px 10px;background: black;border-radius: 10px;">
                                 <span class="button_text">EN</span>
                             </a>
                         </li>
