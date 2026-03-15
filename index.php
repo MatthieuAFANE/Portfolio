@@ -15,123 +15,94 @@
     <header>
         <div class="logo">
             <span>©</span>
-            <span>Code by Matthieu</span>
+            <span data-fr="Code par Matthieu" data-en="Code by Matthieu">Code by Matthieu</span>
         </div>
         <div class="container_nav_home">
                 <nav>
                     <ul>
-                        <li><a id="underline" href="#home">Home</a></li>
-                        <li><a id="underline" href="#about">About</a></li>
-                        <li><a id="underline" href="#work">Work</a></li>
-                        <li><a id="underline" href="#contact">Contact</a></li>
+                        <li><a id="underline" href="#home" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a id="underline" href="#about" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li><a id="underline" href="#work" data-fr="Projets" data-en="Work">Projets</a></li>
+                        <li><a id="underline" href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+
+                        <li style="margin-left: 30px;">
+                            <a id="lang-switch" href="javascript:void(0)" style="font-weight: 700; color: #455CE9;">
+                                <span class="button_text">EN</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-            </div>
+        </div>
         <div class="container_bouton_header">
             <button id="elastic" class="menu" type="button">
-               <span class="button_text">Menu</span>
+               <span class="button_text" data-fr="Menu" data-en="Menu">Menu</span>
                 <div class="button_filler"></div>
             </button>
         </div>
     </header>
-    <!-- <div class="container_nav">
-        <div class="container_nav_header">
-            <div class="logo">
-                <span>©</span>
-                <span>Code by Matthieu</span>
-            </div>
-            <div class="container_bouton_nav">
-                <button id="elastic" class="close" type="button">
-                    <span class="button_text">Close</span>
-                    <div class="button_filler"></div>
-                </button>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="container_social">
-            <div class="container_social_title">
-                <span>Socials & mail</span>
-            </div>
-            <div class="container_social_info">
-                <span>matthieu.afane@gmail.com</span>
-                <ul>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagrame</a></li>
-                    <li><a href="#">LinKedin</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
+
     <div class="container_nav">
 		<div class="container_nav_header">
             <div class="logo">
                 <span>©</span>
-                <span>Code by Matthieu</span>
+                <span data-fr="Code par Matthieu" data-en="Code by Matthieu">Code by Matthieu</span>
             </div>
             <div class="container_bouton_nav">
                 <button id="elastic" class="close" type="button">
-                    <span class="button_text">Close</span>
+                    <span class="button_text" data-fr="Fermer" data-en="Close">Fermer</span>
                     <div class="button_filler"></div>
                 </button>
             </div>
         </div>
 		<nav class="container_menu">
 			<div class="menu__item">
-				<a href="#home" class="menu__item-link">Home</a>
+				<a href="#home" class="menu__item-link" data-fr="Accueil" data-en="Home">Accueil</a>
                 <svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
                 </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
-						<span>Home - Home - Home - Home - Home - Home - Home</span>
+						<span data-fr="Accueil - Accueil - Accueil - Accueil - Accueil" data-en="Home - Home - Home - Home - Home">Accueil - Accueil - Accueil - Accueil - Accueil</span>
 					</div>
 				</div>
 			</div>
 			<div class="menu__item">
-				<a href="#about" class="menu__item-link">About</a>
+				<a href="#about" class="menu__item-link" data-fr="À Propos" data-en="About">À Propos</a>
 				<svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
                 </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
-                        <span>About - About - About - About - About - About - About</span>
+                        <span data-fr="À Propos - À Propos - À Propos - À Propos" data-en="About - About - About - About">À Propos - À Propos - À Propos - À Propos</span>
 					</div>
 				</div>
 			</div>
 			<div class="menu__item">
-				<a href="#work" class="menu__item-link">Work</a>
+				<a href="#work" class="menu__item-link" data-fr="Projets" data-en="Work">Projets</a>
 				<svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
                 </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
-						<span>Work - Work - Work - Work - Work - Work - Work</span>
+						<span data-fr="Projets - Projets - Projets - Projets" data-en="Work - Work - Work - Work">Projets - Projets - Projets - Projets</span>
 					</div>
 				</div>
 			</div>
 			<div class="menu__item">
-				<a href="#contact" class="menu__item-link">Contact</a>
+				<a href="#contact" class="menu__item-link" data-fr="Contact" data-en="Contact">Contact</a>
 				<svg class="menu__item-svg" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M56 520L0 464L384 80H40V0H520V480H440V136L56 520Z" fill="black"/>
                 </svg>
 				<div class="marquee">
 					<div class="marquee__inner">
-						<span>Contact - Contact - Contact - Contact - Contact - Contact - Contact</span>
+						<span data-fr="Contact - Contact - Contact - Contact" data-en="Contact - Contact - Contact - Contact">Contact - Contact - Contact - Contact</span>
 					</div>
 				</div>
 			</div>
 		</nav>
         <div class="socials">
             <ul>
-                <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</span></a></li>
+                <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</a></li>
                 <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinkedIn</a></li>
             </ul>
 		</div>
@@ -147,13 +118,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                             <path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/>
                         </svg>
-                        <h2>Web developer</h2>
+                        <h2 data-fr="Développeur Web" data-en="Web Developer">Web developer</h2>
                     </div>
                     <div class="social-icons">
                         <ul>
                             <li>
                                 <a title="mon github" href="https://github.com/MatthieuAFANE">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Github-Logo-2--Streamline-Logos">
+                                    <svg xmlns="http://www.w3.org/2000/svg"x="0px" y="0px" width="24" height="24" fill="none" viewBox="0 0 24 24" id="Github-Logo-2--Streamline-Logos">
                                         <path d="M11.996 1.284a10.986 10.986 0 0 0 -3.472 21.412c0.548 0.095 0.722 -0.227 0.722 -0.517 0 -0.263 0.006 -0.991 0 -1.91 -3.057 0.662 -3.688 -1.448 -3.688 -1.448a2.907 2.907 0 0 0 -1.22 -1.607c-0.997 -0.682 0.075 -0.669 0.075 -0.669a2.307 2.307 0 0 1 1.683 1.131 2.34 2.34 0 0 0 3.197 0.914 2.34 2.34 0 0 1 0.697 -1.464c-2.439 -0.279 -5.004 -1.22 -5.004 -5.432a4.248 4.248 0 0 1 1.132 -2.948 3.942 3.942 0 0 1 0.107 -2.907s0.924 -0.295 3.02 1.128a10.402 10.402 0 0 1 5.503 0c2.102 -1.422 3.018 -1.128 3.018 -1.128 0.405 0.92 0.444 1.96 0.109 2.907a4.243 4.243 0 0 1 1.13 2.95c0 4.223 -2.569 5.15 -5.016 5.42a2.604 2.604 0 0 1 0.752 2.026v3.041c0 0.294 0.177 0.619 0.735 0.512a10.986 10.986 0 0 0 -3.48 -21.411Z" stroke-width="1"></path>
                                     </svg>
                                 </a>
@@ -165,13 +136,6 @@
                                     </svg>
                                 </a>
                             </li>
-                            <!-- <li>
-                                <a title="mon twitter" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Twitter-Logo-1--Streamline-Logos">
-                                        <path d="M1 19c15.617 6.062 20.038 -5.025 19.905 -10.5C22.173 8.156 23 7.292 23 6.406c-1.048 0.55 -1.595 0.394 -2.119 0 1.128 -0.768 1.071 -1.863 1.071 -2.619 -0.527 0.277 -1.503 0.96 -2.619 1.048 -0.745 -1.166 -2.619 -2.095 -5.238 -1.048 -2.619 1.048 -3.143 3.842 -2.619 5.238 -3.352 0 -7.333 -3.492 -8.905 -5.238 -1.883 2.688 0.5 5.353 1.572 6.286 -0.715 0.214 -1.572 0 -2.095 -0.524 0 2.991 2.619 4.19 3.666 4.715H3.62c0 2.095 2.444 2.968 3.667 3.142 -0.838 0.838 -4.215 1.596 -6.286 1.596Z" stroke-width="1"></path>
-                                    </svg>
-                                </a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -189,17 +153,11 @@
         </section>
         <section id="about">
            <div class="myStackAbout">
-
-                <!-- HOME -->
-
-
-                <!-- ABOUT ME -->
                 <div class="about-me">
-
                     <section class="light">
                     <figure>
                         <blockquote>
-                        <p class="js-split-letters">Actuellement étudiant en informatique à l'IUT de Reims-Châlons-Charleville, je transforme le code en projets concrets.</p>
+                        <p class="js-split-letters" data-fr="Actuellement étudiant en informatique à l'IUT de Reims-Châlons-Charleville, je transforme le code en projets concrets." data-en="Currently a computer science student at IUT Reims, I transform code into concrete projects.">Actuellement étudiant en informatique à l'IUT de Reims-Châlons-Charleville, je transforme le code en projets concrets.</p>
                         </blockquote>
                     </figure>
                     </section>
@@ -207,7 +165,7 @@
                     <section class="dark">
                     <figure>
                         <blockquote>
-                        <p class="js-split-letters big">Mon Objectif ?</p>
+                        <p class="js-split-letters big" data-fr="Mon Objectif ?" data-en="My Goal?">Mon Objectif ?</p>
                         </blockquote>
                     </figure>
                     </section>
@@ -215,46 +173,17 @@
                     <section class="light">
                     <figure>
                         <blockquote>
-                        <p class="js-split-letters">Transformer vos idées en expériences visuelles mémorables.</p>
+                        <p class="js-split-letters" data-fr="Transformer vos idées en expériences visuelles mémorables." data-en="Transforming your ideas into memorable visual experiences.">Transformer vos idées en expériences visuelles mémorables.</p>
                         </blockquote>
                     </figure>
                     </section>
-
-                    <!-- <section class="dark">
-                    <figure>
-                        <blockquote>
-                        <p class="js-split-letters">Du concret, zéro blabla.</p>
-                        </blockquote>
-                        <figcaption>— Promesse</figcaption>
-                    </figure>
-                    </section> -->
-
-                    <!-- <section class="dark tech-tools">
-                        <blockquote>
-                            <p class="js-split-letters">Technologies & Tools</p>
-                        </blockquote>
-                        <div class="tech-buttons">
-                            <button>GitHub & Gitlab</button>
-                            <button>CSS</button>
-                            <button>PHP</button>
-                            <button>C#</button>
-                            <button>HTML</button>
-                            <button>JS</button>
-                            <button>Python</button>
-                            <button>Symfony</button>
-                            <button>Figma</button>
-                            <button>GSAP</button>
-                            <button>SQL</button>
-                            <button>phpMyAdmin</button>
-                        </div>
-                    </section> -->
 
                     <section id="skills-only">
                     <div class="container_skills">
                         <div class="skills-card dark">
                             <div class="skills-header">
-                                <h3>Technologies & Tools</h3>
-                                <p>Mon arsenal technique pour vos projets.</p>
+                                <h3 data-fr="Technologies & Outils" data-en="Technologies & Tools">Technologies & Outils</h3>
+                                <p data-fr="Mon arsenal technique pour vos projets." data-en="My technical arsenal for your projects.">Mon arsenal technique pour vos projets.</p>
                             </div>
                             <div class="skills-grid">
                                 <div class="skill-item magnetic-button">
@@ -309,111 +238,43 @@
                         </div>
                     </div>
                 </section>
-
-                </div>
-
-            </div>
-        </section>
-        <section id="work">
-            <div class="container_work">
-                <div class="container_work_header">
-                    <div class="container_work_header_title">
-                        <h2>Work</h2>
-                    </div>
-                </div>
-                <div class="container_work_content">
-                    <figure class="work_template">
-                        <a href="#" class="work_template_link">
-                            <div class="work_template_image_more">
-                                <img src="assets/img/portfolio_MA.jpg" alt="portfolio Matthieu Afane">
-                            </div>
-                            
-                            <div class="work_template_info">
-                                <div class="work_template_info_header">
-                                    <h4 class="technology">HTML • CSS • JS • PHP</h4>
-                                    <h4 class="date">2025</h4>
-                                </div>
-                                <div class="work_template_info_content">
-                                    <div class="work_template_info_content_title">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                                        <h3>MATTHIEU AFANE</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </figure>
-                    <figure class="work_template">
-                        <a href="http://aroma.free.nf/index.php?step=1" class="work_template_link">
-                            <div class="work_template_image_more">
-                                <img src="assets/img/aroma.jpg" alt="e-commerce Aroma">
-                            </div>
-                            
-                            <div class="work_template_info">
-                                <div class="work_template_info_header">
-                                    <h4 class="technology">HTML • CSS • JS • PHP • BD</h4>
-                                    <h4 class="date">2025</h4>
-                                </div>
-                                <div class="work_template_info_content">
-                                    <div class="work_template_info_content_title">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                                        <h3>AROMA</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </figure>
-                    <!-- 
-                    <figure class="work_template">
-                        <a href="#" class="work_template_link">
-                            <div class="work_template_image_more">
-                                <img src="https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/688443b774d62163098050.jpg" alt="">
-                            </div>
-                            
-                            <div class="work_template_info">
-                                <div class="work_template_info_header">
-                                    <h4 class="technology">HTML • CSS • JS • PHP</h4>
-                                    <h4 class="date">2024</h4>
-                                </div>
-                                <div class="work_template_info_content">
-                                    <div class="work_template_info_content_title">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                                        <h3>HONDA</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </figure>
-                    <figure class="work_template">
-                        <a href="#" class="work_template_link">
-                            <div class="work_template_image_more">
-                                <img src="https://assets.awwwards.com/awards/submissions/2025/08/68af13d98621f852628699.jpg" alt="">
-                            </div>
-                            
-                            <div class="work_template_info">
-                                <div class="work_template_info_header">
-                                    <h4 class="technology">HTML • CSS • JS • PHP</h4>
-                                    <h4 class="date">2024</h4>
-                                </div>
-                                <div class="work_template_info_content">
-                                    <div class="work_template_info_content_title">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                                        <h3>TWICE</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </figure> -->
                 </div>
             </div>
         </section>
+
+        <section class="project-section">
+  <div class="container">
+    <div class="project-header">
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          <span class="line" data-fr="Mes Projets" data-en="My Projects">Mes Projets</span>
+        </h2>
+      </div>
+      <div class="description-wrapper">
+        <p class="reveal-text" id="reveal-text" data-fr="Je commence par comprendre les besoins de l'utilisateur et je planifie le flux de l'application à travers des maquettes." data-en="I start by understanding user needs and planning the application flow through wireframes.">
+          Je commence par comprendre les besoins de l'utilisateur et je planifie le flux de l'application à travers des maquettes.
+        </p>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" data-fr="Tous" data-en="All">Tous</button>
+      <button class="filter-btn" data-filter="scolaire" data-fr="Scolaire" data-en="School">Scolaire</button>
+      <button class="filter-btn" data-filter="perso" data-fr="Perso" data-en="Personal">Perso</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+    </div>
+  </div>
+</section>
         <section id="contact">
             <div class="container_contact">
                 <div class="container_contact_left">
                     <div class="title">
                         <h2>
-                            <span>Let’s</span>
-                            <span>Get in</span>
-                            <span>Touch</span>
+                            <span data-fr="Restons" data-en="Let’s">Let’s</span>
+                            <span data-fr="en" data-en="Get in">Get in</span>
+                            <span data-fr="Contact" data-en="Touch">Touch</span>
                         </h2>
                         <button type="button">
                             <span class="button_text">matthieu.afane@gmail.com</span>
@@ -424,7 +285,7 @@
                 <div class="container_contact_right">
                     <form action="/assets/php/contactFormTraitement.php" method="post">
                         <div class="form_container">
-                            <label for="email">Adresse mail</label>
+                            <label for="email" data-fr="Adresse mail" data-en="Email Address">Adresse mail</label>
                             <input
                                     placeholder="Entrez votre e-mail"
                                     id="email"
@@ -436,7 +297,7 @@
 
                         <div class="container_double">
                             <div class="form_container">
-                                <label for="prenom">Prénom</label>
+                                <label for="prenom" data-fr="Prénom" data-en="First Name">Prénom</label>
                                 <input
                                         placeholder="Entrez votre prénom"
                                         id="prenom"
@@ -446,7 +307,7 @@
                                 >
                             </div>
                             <div class="form_container">
-                                <label for="nom">Nom</label>
+                                <label for="nom" data-fr="Nom" data-en="Last Name">Nom</label>
                                 <input
                                         placeholder="Entrez votre nom"
                                         id="nom"
@@ -458,7 +319,7 @@
                         </div>
 
                         <div class="form_container">
-                            <label for="message">Message</label>
+                            <label for="message" data-fr="Message" data-en="Message">Message</label>
                             <textarea
                                     placeholder="Entrez votre message"
                                     id="message"
@@ -468,7 +329,7 @@
                         </div>
 
                         <button id="elastic" class="submit_message" type="submit">
-                            <span class="button_text">Send me</span>
+                            <span class="button_text" data-fr="Envoyer" data-en="Send">Envoyer</span>
                             <div class="button_filler"></div>
                         </button>
                     </form>
@@ -483,87 +344,105 @@
                     <img src="assets/img/matthieuAfane.png" alt="moi">
                 </div>
                 <div class="text">
-                    <h2>Let's work together</h2>
+                    <h2 data-fr="Travaillons ensemble" data-en="Let's work together">Let's work together</h2>
                 </div>
             </div>
             <div class="container_footer_edition_socials">
                 <div class="edition">
                     <div class="title">
-                        <h4>Edition</h4>
+                        <h4 data-fr="Édition" data-en="Edition">Edition</h4>
                     </div>
                     <div class="info">
                         <span>© 2025 matthieuafane.free.nf</span>
-                        <a id="underline" href="#" class="btn-mentions">Mentions Légales</a>
+                        <a id="underline" href="#" class="btn-mentions" data-fr="Mentions Légales" data-en="Legal Mentions">Mentions Légales</a>
                     </div>
                 </div>
                 <div class="socials">
                     <div class="title">
-                        <h4>Socials</h4>
+                        <h4 data-fr="Réseaux" data-en="Socials">Socials</h4>
                     </div>
                     <ul>
                         <li><a id="underline" href="https://github.com/MatthieuAFANE">GitHub</a></li>
-                        <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinKedin</a></li>
+                        <li><a id="underline" href="https://fr.linkedin.com/in/matthieu-afane-59594b382?trk=people-guest_people_search-card">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- POPUP MENTIONS LÉGALES (Design Split-Screen Awwwards) -->
 <div class="legal-overlay-new">
     <div class="legal-container">
         
-        <!-- Moitié Gauche (Bleue) : Titre fixe -->
         <div class="legal-left">
             <div class="legal-title-wrapper">
-                <h2>Mentions<br>Légales</h2>
-                <span class="legal-date">Mise à jour : 2026</span>
+                <h2 data-fr="Mentions Légales" data-en="Legal Mentions">Mentions Légales</h2>
+                <span class="legal-date" data-fr="Mise à jour : 2026" data-en="Updated: 2026">Mise à jour : 2026</span>
             </div>
         </div>
 
-        <!-- Moitié Droite (Sombre) : Contenu avec Scroll Natif -->
         <div class="legal-right">
-            <!-- Bouton de fermeture élastique -->
             <button id="elastic" class="close-legal-btn" type="button">
-                <span class="button_text">Close</span>
+                <span class="button_text" data-fr="Fermer" data-en="Close">Close</span>
                 <div class="button_filler"></div>
             </button>
 
-            <!-- ZONE DE SCROLL NATIF (data-lenis-prevent bloque le JS d'arrière-plan) -->
             <div class="legal-scroll-content" data-lenis-prevent>
                 <div class="legal-block">
-                    <h3>01. L'Architecte de la Matrice</h3>
-                    <p>Ce portfolio intergalactique est sculpté avec amour, de la sueur, et une quantité déraisonnable de caféine par <strong>Matthieu Afane</strong>, dompteur de pixels et développeur web.</p>
+                    <h3 data-fr="01. Éditeur du site" data-en="01. Publisher">01. Éditeur du site</h3>
+                    <p data-fr="Le présent site est édité par Matthieu Afane, Développeur Web. Adresse : 9 rue des crayères, Reims 51100. Contact : matthieuafane@gmail.com. Le Directeur de la publication est Matthieu Afane." 
+                       data-en="This site is published by Matthieu Afane, Web Developer. Address: 9 rue des crayères, Reims 51100. Contact: matthieuafane@gmail.com. The Publication Director is Matthieu Afane.">
+                        Le présent site est édité par <strong>Matthieu Afane</strong>, Développeur Web.<br>
+                        <strong>Adresse :</strong> 9 rue des crayères, Reims 51100<br>
+                        <strong>Contact :</strong> matthieuafane@gmail.com <br><br>
+                        Le Directeur de la publication est Matthieu Afane.
+                    </p>
                 </div>
                 
                 <div class="legal-block">
-                    <h3>02. Hébergement Quantique</h3>
-                    <p>Ce site repose sur l'hébergement de <strong>Free.nf</strong>. Nos serveurs fonctionnent exclusivement à l'énergie propre, générée par des hamsters virtuels surentraînés courant dans des roues en fibre de carbone.</p>
+                    <h3 data-fr="02. Hébergement" data-en="02. Hosting">02. Hébergement</h3>
+                    <p data-fr="Ce site est hébergé par https://www.infinityfree.com/. Site web : https://matthieuafane.free.nf/"
+                       data-en="This site is hosted by https://www.infinityfree.com/. Website: https://matthieuafane.free.nf/">
+                        Ce site est hébergé par <strong>https://www.infinityfree.com/</strong>.<br>
+                        <strong>Site web :</strong> <a href="https://free.nf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">https://matthieuafane.free.nf/</a>
+                    </p>
                 </div>
                 
                 <div class="legal-block">
-                    <h3>03. Traitement des Données (RGPD)</h3>
-                    <p><strong>Zéro tracking. Zéro espionnage.</strong> Je ne récolte absolument aucune donnée personnelle dans votre dos. Les seuls "cookies" acceptés sur ce site sont ceux aux pépites de chocolat. Naviguez en paix !</p>
+                    <h3 data-fr="03. Propriété Intellectuelle" data-en="03. Intellectual Property">03. Propriété Intellectuelle</h3>
+                    <p data-fr="L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. Toute reproduction est interdite sans accord."
+                       data-en="The entire site is subject to French and international legislation on copyright and intellectual property. Any reproduction is prohibited without agreement.">
+                        L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. La structure générale, ainsi que les textes, images, maquettes, et logos qui le composent sont la propriété exclusive de <strong>Matthieu Afane</strong>.<br><br>
+                        Toute reproduction, distribution, modification ou adaptation de ces éléments, partielle ou totale, est strictement interdite sans l'accord exprès par écrit de l'éditeur.
+                    </p>
                 </div>
                 
                 <div class="legal-block">
-                    <h3>04. Propriété Intellectuelle</h3>
-                    <p>Vous avez le droit d'inspecter le code source (c'est fait pour). En revanche, le plagiat intégral de ce design déclenchera une ancienne malédiction git : tous vos futurs <em>commits</em> se solderont par des conflits impossibles à résoudre. Vous êtes prévenu.</p>
+                    <h3 data-fr="04. Données Personnelles (RGPD)" data-en="04. Personal Data (GDPR)">04. Données Personnelles (RGPD)</h3>
+                    <p data-fr="Soucieux du respect de votre vie privée, ce site a été conçu pour minimiser la collecte de données. Vous disposez d'un droit d'accès et de suppression."
+                       data-en="Concerned about respecting your privacy, this site was designed to minimize data collection. You have a right of access and deletion.">
+                        Soucieux du respect de votre vie privée, ce site a été conçu pour minimiser la collecte de données. Les informations éventuellement recueillies via un formulaire de contact sont utilisées uniquement pour répondre à vos requêtes et ne sont jamais cédées à des tiers.<br><br>
+                        Conformément à la loi "Informatique et Libertés" et au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition concernant vos données.
+                    </p>
+                </div>
+
+                <div class="legal-block">
+                    <h3 data-fr="05. Gestion des Cookies" data-en="05. Cookie Management">05. Gestion des Cookies</h3>
+                    <p data-fr="La navigation sur ce site n'entraîne pas l'installation de cookies de pistage. Seuls des cookies techniques nécessaires au fonctionnement peuvent être déposés."
+                       data-en="Navigation on this site does not result in the installation of tracking cookies. Only technical cookies necessary for operation may be deposited.">
+                        La navigation sur ce site n'entraîne pas l'installation de cookies de pistage ou publicitaires sur votre terminal. Ce portfolio fonctionne sans collecter de données de navigation à des fins commerciales.
+                    </p>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
+<div class="custom-cursor"></div>
 
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- JS source code -->
-    <script src="assets/js/script.js"></script>
-    
-    <!-- JS SMOOTH SCROLLING -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
