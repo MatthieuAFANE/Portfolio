@@ -26,6 +26,11 @@
                         <li><a id="underline" href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
 
                         <li>
+                            <a class="cv" href="assets/img/cv.pdf" style="font-weight: 700; padding: 5.5px 8px; border-radius: 10px;border: 2px solid #fff; color: #fff;">
+                                <span class="button_text">CV</span>
+                            </a>
+                        </li>
+                        <li>
                             <a id="lang-switch" href="javascript:void(0)" style="font-weight: 700; padding: 7.5px 10px;background: black;border-radius: 10px;">
                                 <span class="button_text">EN</span>
                             </a>
@@ -182,7 +187,7 @@
                     <div class="container_skills">
                         <div class="skills-card dark">
                             <div class="skills-header">
-                                <h3 data-fr="Technologies & Outils" data-en="Technologies & Tools">Technologies & Outils</h3>
+                                <h3 data-fr="Technologies" data-en="Technologies">Technologies</h3>
                                 <p data-fr="Mon arsenal technique pour vos projets." data-en="My technical arsenal for your projects.">Mon arsenal technique pour vos projets.</p>
                             </div>
                             <div class="skills-grid">

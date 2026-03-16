@@ -686,10 +686,11 @@ button.submit_message .button_filler {
 }
 .skills-header h3 {
     font-size: clamp(3.5rem, 8vw, 7rem);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 1rem;
     color: #fff;
-    font-family: 'Clash Display', sans-serif;
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    text-transform: uppercase;
 }
 .skills-header p {
     opacity: 0.4;
@@ -1045,7 +1046,7 @@ html.lenis {
 }
 
 .main-title {
-  font-family: var(--font-heading);
+  font-family: 'ClashDisplay-Variable', sans-serif ;
   font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 500;
   line-height: 0.9;

@@ -184,10 +184,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // 8. PROJETS & CURSEUR (GLOBALISÉ)
     // ==========================================
     const projectsData = [
-        { title: "Aroma E-commerce", type: "perso", image: "assets/img/aroma.jpg", link: "http://aroma.free.nf/", tags: ["PHP", "MySQL", "JS", "HTML/CSS"], desc: "Plateforme complète de vente en ligne." },
-        { title: "Portfolio Matthieu", type: "perso", image: "assets/img/portfolio_MA.jpg", link: "#", tags: ["GSAP", "JS", "HTML/CSS", "PHP"], desc: "Mon portfolio avec animations avancées." }
+        {
+            title: "Aroma E-commerce",
+            type: "perso",
+            image: "assets/img/aroma.jpg",
+            link: "http://aroma.free.nf/",
+            tags: ["PHP", "MySQL", "JS", "HTML/CSS"],
+            desc: "Site e-commerce complet de pods aromatisés olfactifs. Gestion du panier, des utilisateurs et requêtes en base de données développés en PHP natif."
+        },
+        {
+            title: "Portfolio Matthieu",
+            type: "perso",
+            image: "assets/img/portfolio_MA.jpg",
+            link: "#",
+            tags: ["GSAP", "JS", "HTML/CSS", "PHP"],
+            desc: "Portfolio interactif présentant mes projets. Mise en avant d'une interface utilisateur fluide et dynamique grâce aux animations GSAP."
+        },
+        {
+            title: "Space Invaders",
+            type: "scolaire",
+            image: "assets/img/cover_16x9-1714708168967.avif",
+            link: "https://github.com/MatthieuAFANE/SpaceInvaders",
+            tags: ["Phaser"],
+            desc: "Reproduction du célèbre jeu d'arcade rétro. Projet axé sur la logique algorithmique et le moteur physique avec le framework Phaser."
+        },
+        {
+            title: "Colive",
+            type: "scolaire",
+            image: "assets/img/Colive.jpg",
+            link: "https://github.com/MatthieuAFANE/Colive",
+            tags: ["Symfony"],
+            desc: "Application web de gestion de logements étudiants façon Airbnb. Conception robuste basée sur l'architecture MVC avec le framework Symfony."
+        }
     ];
-
     const cursor = document.querySelector('.custom-cursor');
     if (cursor) {
         const xTo = gsap.quickTo(cursor, "x", { duration: 0.7, ease: "power2.out" });
